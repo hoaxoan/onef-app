@@ -9,6 +9,7 @@ import 'package:onef/services/httpie.dart';
 import 'package:onef/services/navigation_service.dart';
 import 'package:onef/services/toast.dart';
 import 'package:onef/services/user.dart';
+import 'package:onef/widgets/reaction_emoji_count.dart';
 
 class OFPostReactions extends StatefulWidget {
   final Post post;

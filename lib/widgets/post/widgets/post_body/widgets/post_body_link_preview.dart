@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:onef/models/post.dart';
 import 'package:onef/models/post_preview_link_data.dart';
 import 'package:onef/provider.dart';
+import 'package:onef/widgets/link_preview.dart';
 
 class OFPostBodyLinkPreview extends StatelessWidget {
   final Post post;

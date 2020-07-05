@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:onef/models/theme.dart';
 import 'package:onef/provider.dart';
+import 'package:onef/services/localization.dart';
 import 'package:onef/widgets/fields/text_field.dart';
 import 'package:onef/widgets/icon.dart';
 import 'package:onef/widgets/theming/text.dart';
@@ -36,11 +37,13 @@ class OFSearchBarState extends State<OFSearchBar> {
   @override
   Widget build(BuildContext context) {
     bool hasText = _textController.text.length > 0;
+    var provider = OneFProvider.of(context);
+
+    LocalizationService localizationService = provider.localizationService;
+
     EdgeInsetsGeometry inputContentPadding = EdgeInsets.only(
         top: 8.0, bottom: 8.0, left: 20, right: hasText ? 40 : 20);
 
-    var provider = OneFProvider.of(context);
-    var localizationService = provider.localizationService;
     var themeService = provider.themeService;
     var themeValueParserService = provider.themeValueParserService;
 
@@ -82,7 +85,7 @@ class OFSearchBarState extends State<OFSearchBar> {
                           focusNode: _textFocusNode,
                           controller: _textController,
                           keyboardType: TextInputType.text,
-                          style: TextStyle(fontSize: 18.0),
+                          style: TextStyle(fontSize: 14.0),
                           decoration: InputDecoration(
                               hintText: widget.hintText,
                               contentPadding: inputContentPadding,

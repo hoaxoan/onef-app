@@ -1,9 +1,17 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:onef/models/theme.dart';
+import 'package:onef/pages/home/dialogs/video_dialog.dart';
+import 'package:onef/pages/home/pages/modals/zoomable_photo.dart';
 import 'package:onef/services/theme.dart';
 import 'package:onef/services/theme_value_parser.dart';
+import 'package:onef/widgets/video_player/widgets/chewie/chewie_player.dart';
 import 'package:tinycolor/tinycolor.dart';
+import 'package:video_player/video_player.dart';
+import 'package:wakelock/wakelock.dart';
 
 class DialogService {
   ThemeService _themeService;
@@ -30,18 +38,93 @@ class DialogService {
             enableAlpha: enableAlpha,
             pickerColor: initialColor,
             onColorChanged: onColorChanged,
-            enableLabel: false,
             pickerAreaHeightPercent: 0.8,
           ),
         ),
         context: context);
   }
 
+  Future<void> showZoomablePhotoBoxView(
+      {@required String imageUrl, @required BuildContext context}) {
+    return showGeneralDialog(
+      context: context,
+      pageBuilder: (BuildContext buildContext, Animation<double> animation,
+          Animation<double> secondaryAnimation) {
+        final ThemeData theme = Theme.of(context, shadowThemeOnly: true);
+        final Widget pageChild = OFZoomablePhotoModal(imageUrl);
+        return Builder(builder: (BuildContext context) {
+          return theme != null
+              ? Theme(data: theme, child: pageChild)
+              : pageChild;
+        });
+      },
+      barrierDismissible: true,
+      barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
+      barrierColor: Colors.black87,
+      transitionDuration: const Duration(milliseconds: 100),
+      transitionBuilder: _buildMaterialDialogTransitions,
+    );
+  }
+
+  Future<void> showVideo(
+      {String videoUrl,
+        File video,
+        VideoPlayerController videoPlayerController,
+        ChewieController chewieController,
+        bool autoPlay: true,
+        @required BuildContext context}) async {
+    SystemChrome.setEnabledSystemUIOverlays([]);
+    Wakelock.enable();
+    await showGeneralDialog(
+      context: context,
+      pageBuilder: (BuildContext buildContext, Animation<double> animation,
+          Animation<double> secondaryAnimation) {
+        final ThemeData theme = Theme.of(context, shadowThemeOnly: true);
+        final Widget pageChild = Material(
+          child: OFVideoDialog(
+            autoPlay: autoPlay,
+            video: video,
+            videoUrl: videoUrl,
+            videoPlayerController: videoPlayerController,
+            chewieController: chewieController,
+          ),
+        );
+        return Builder(builder: (BuildContext context) {
+          return theme != null
+              ? Theme(data: theme, child: pageChild)
+              : pageChild;
+        });
+      },
+      barrierDismissible: true,
+      barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
+      barrierColor: Colors.black,
+      transitionDuration: const Duration(milliseconds: 100),
+      transitionBuilder: _buildMaterialDialogTransitions,
+    );
+    Wakelock.disable();
+    SystemChrome.setEnabledSystemUIOverlays(
+        [SystemUiOverlay.top, SystemUiOverlay.bottom]);
+  }
+
+  Widget _buildMaterialDialogTransitions(
+      BuildContext context,
+      Animation<double> animation,
+      Animation<double> secondaryAnimation,
+      Widget child) {
+    return FadeTransition(
+      opacity: CurvedAnimation(
+        parent: animation,
+        curve: Curves.easeOut,
+      ),
+      child: child,
+    );
+  }
+
   Future<dynamic> showAlert(
       {@required Widget content,
-      List<Widget> actions,
-      Widget title,
-      @required BuildContext context}) {
+        List<Widget> actions,
+        Widget title,
+        @required BuildContext context}) {
     return showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -57,7 +140,7 @@ class DialogService {
   Color _getDialogBackgroundColor() {
     OFTheme theme = _themeService.getActiveTheme();
     Color primaryColor =
-        _themeValueParserService.parseColor(theme.primaryColor);
+    _themeValueParserService.parseColor(theme.primaryColor);
     return TinyColor(primaryColor).lighten(10).color;
   }
 

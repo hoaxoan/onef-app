@@ -8,6 +8,7 @@ import 'package:onef/services/localization.dart';
 import 'package:onef/services/navigation_service.dart';
 import 'package:onef/services/utils_service.dart';
 import 'package:onef/widgets/avatars/avatar.dart';
+import 'package:onef/widgets/avatars/community_avatar.dart';
 import 'package:onef/widgets/icon.dart';
 import 'package:onef/widgets/post/post.dart';
 import 'package:onef/widgets/post/widgets/post_header/widgets/community_post_header/community_post_creator_identifier.dart';

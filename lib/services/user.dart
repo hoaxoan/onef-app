@@ -9,6 +9,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_advanced_networkimage/provider.dart';
 import 'package:meta/meta.dart';
 import 'package:onef/models/categories_list.dart';
+import 'package:onef/models/emoji.dart';
+import 'package:onef/models/emoji_group_list.dart';
+import 'package:onef/models/post.dart';
+import 'package:onef/models/post_comment.dart';
+import 'package:onef/models/post_media_list.dart';
+import 'package:onef/models/post_reaction.dart';
 import 'package:onef/models/story_categories_list.dart';
 import 'package:onef/models/story_category.dart';
 import 'package:onef/models/color_range.dart';
@@ -1089,6 +1095,80 @@ class UserService {
     HttpieResponse response = await _moodsApiService.getMoods();
     _checkResponseIsOk(response);
     return MoodsList.fromJson(json.decode(response.body));
+  }
+
+  // Posts
+  Future<PostReaction> reactToPost(
+      {@required Post post, @required Emoji emoji}) async {
+    HttpieResponse response = await _postsApiService.reactToPost(
+        postUuid: post.uuid, emojiId: emoji.id);
+    _checkResponseIsCreated(response);
+    return PostReaction.fromJson(json.decode(response.body));
+  }
+
+  Future<void> deletePostReaction(
+      {@required PostReaction postReaction, @required Post post}) async {
+    HttpieResponse response = await _postsApiService.deletePostReaction(
+        postReactionId: postReaction.id, postUuid: post.uuid);
+    _checkResponseIsOk(response);
+  }
+
+  Future<String> translatePost({@required Post post}) async {
+    HttpieResponse response =
+    await _postsApiService.translatePost(postUuid: post.uuid);
+
+    _checkResponseIsOk(response);
+
+    return json.decode(response.body)['translated_text'];
+  }
+
+  Future<String> translatePostComment(
+      {@required Post post, @required PostComment postComment}) async {
+    HttpieResponse response = await _postsApiService.translatePostComment(
+        postUuid: post.uuid, postCommentId: postComment.id);
+
+    _checkResponseIsOk(response);
+
+    return json.decode(response.body)['translated_text'];
+  }
+
+  // Media
+  Future<void> addMediaToPost(
+      {@required File file, @required Post post}) async {
+    HttpieStreamedResponse response =
+    await _postsApiService.addMediaToPost(file: file, postUuid: post.uuid);
+
+    _checkResponseIsOk(response);
+  }
+
+  Future<PostMediaList> getMediaForPost({@required Post post}) async {
+    HttpieResponse response =
+    await _postsApiService.getPostMedia(postUuid: post.uuid);
+
+    _checkResponseIsOk(response);
+
+    return PostMediaList.fromJson(json.decode(response.body));
+  }
+
+
+  // Emoji
+  Future<EmojiGroupList> getEmojiGroups() async {
+    /*HttpieResponse response = await this._emojisApiService.getEmojiGroups();
+
+    _checkResponseIsOk(response);
+
+    return EmojiGroupList.fromJson(json.decode(response.body));*/
+
+    return null;
+  }
+
+  Future<EmojiGroupList> getReactionEmojiGroups() async {
+    HttpieResponse response =
+    await this._postsApiService.getReactionEmojiGroups();
+
+    _checkResponseIsOk(response);
+
+    return EmojiGroupList.fromJson(json.decode(response.body));
   }
 
 }

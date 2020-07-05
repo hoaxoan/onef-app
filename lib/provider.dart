@@ -14,6 +14,7 @@ import 'package:onef/services/environment_loader.dart';
 import 'package:onef/services/hashtags_api.dart';
 import 'package:onef/services/httpie.dart';
 import 'package:onef/services/intercom.dart';
+import 'package:onef/services/link_preview.dart';
 import 'package:onef/services/localization.dart';
 import 'package:onef/services/media.dart';
 import 'package:onef/services/modal_service.dart';
@@ -31,6 +32,7 @@ import 'package:onef/services/text_autocompletion.dart';
 import 'package:onef/services/theme.dart';
 import 'package:onef/services/theme_value_parser.dart';
 import 'package:onef/services/toast.dart';
+import 'package:onef/services/url_launcher.dart';
 import 'package:onef/services/user.dart';
 import 'package:onef/services/user_preferences.dart';
 import 'package:onef/services/utils_service.dart';
@@ -59,7 +61,7 @@ class OneFProviderState extends State<OneFProvider> {
   CreateAccountBloc createAccountBloc = CreateAccountBloc();
 
   //CreateStoryBloc createStoryBloc = CreateStoryBloc();
-
+  UrlLauncherService urlLauncherService = UrlLauncherService();
   ValidationService validationService = ValidationService();
   HttpieService httpService = HttpieService();
   AuthApiService authApiService = AuthApiService();
@@ -72,8 +74,7 @@ class OneFProviderState extends State<OneFProvider> {
   ModalService modalService = ModalService();
   ConnectionsApiService connectionsApiService = ConnectionsApiService();
   ConnectivityService connectivityService = ConnectivityService();
-  PushNotificationsService pushNotificationsService =
-      PushNotificationsService();
+  PushNotificationsService pushNotificationsService = PushNotificationsService();
   IntercomService intercomService = IntercomService();
   UtilsService utilsService = UtilsService();
   ThemeService themeService = ThemeService();
@@ -85,6 +86,7 @@ class OneFProviderState extends State<OneFProvider> {
   DatePickerService datePickerService = DatePickerService();
   HashtagsApiService hashtagsApiService = HashtagsApiService();
   TextAutocompletionService textAccountAutocompletionService = TextAutocompletionService();
+  LinkPreviewService linkPreviewService = LinkPreviewService();
 
   NavigationService navigationService = NavigationService();
   PostsApiService postsApiService = PostsApiService();
@@ -156,6 +158,9 @@ class OneFProviderState extends State<OneFProvider> {
     dialogService.setThemeValueParserService(themeValueParserService);
     hashtagsApiService.setHttpieService(httpService);
     hashtagsApiService.setStringTemplateService(stringTemplateService);
+    linkPreviewService.setHttpieService(httpService);
+    linkPreviewService.setUtilsService(utilsService);
+    linkPreviewService.setValidationService(validationService);
 
     notesApiService.setHttpieService(httpService);
     notesApiService.setStringTemplateService(stringTemplateService);

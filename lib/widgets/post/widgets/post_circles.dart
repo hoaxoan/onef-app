@@ -4,6 +4,8 @@ import 'package:onef/models/circle.dart';
 import 'package:onef/models/post.dart';
 import 'package:onef/provider.dart';
 import 'package:onef/services/localization.dart';
+import 'package:onef/widgets/circle_color_preview.dart';
+import 'package:onef/widgets/cirles_wrap.dart';
 import 'package:onef/widgets/theming/actionable_smart_text.dart';
 import 'package:onef/widgets/theming/text.dart';
 

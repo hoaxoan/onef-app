@@ -1,8 +1,10 @@
 import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:onef/models/circle.dart';
 import 'package:onef/models/community.dart';
 import 'package:onef/models/emoji.dart';
+import 'package:onef/models/follows_list.dart';
 import 'package:onef/models/hashtag.dart';
 import 'package:onef/models/post.dart';
 import 'package:onef/models/post_comment.dart';
@@ -15,21 +17,21 @@ class NavigationService {
 
   Future navigateToUserProfile(
       {@required User user, @required BuildContext context}) async {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('userProfileRoute'),
           builder: (BuildContext context) {
-            return OBProfilePage(
+            return OFProfilePage(
               user,
             );
           }),
-    );
+    );*/
   }
 
   Future navigateToCommunity(
       {@required Community community, @required BuildContext context}) async {
-    return Navigator.push(
+   /* return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('communityRoute'),
@@ -38,12 +40,12 @@ class NavigationService {
               community,
             );
           }),
-    );
+    );*/
   }
 
   Future navigateToCommunityStaffPage(
       {@required BuildContext context, @required Community community}) {
-    return Navigator.push(
+   /* return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('CommunityStaffPageRoute'),
@@ -52,12 +54,12 @@ class NavigationService {
               community: community,
             );
           }),
-    );
+    );*/
   }
 
   Future navigateToCommunityRulesPage(
       {@required BuildContext context, @required Community community}) {
-    return Navigator.push(
+/*    return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('communityRulesPageRoute'),
@@ -66,14 +68,14 @@ class NavigationService {
               community: community,
             );
           }),
-    );
+    );*/
   }
 
   Future<bool> navigateToConfirmAddCommunityAdministrator(
       {@required Community community,
       @required User user,
       @required BuildContext context}) async {
-    return Navigator.push(
+   /* return Navigator.push(
       context,
       OFSlideRightRoute(
           slidableKey: _getKeyRandomisedWithWord(
@@ -84,12 +86,12 @@ class NavigationService {
               user: user,
             );
           }),
-    );
+    );*/
   }
 
   Future<bool> navigateToConfirmDeleteAccount(
       {@required String userPassword, @required BuildContext context}) async {
-    return Navigator.push(
+   /* return Navigator.push(
       context,
       OFSlideRightRoute(
           slidableKey: _getKeyRandomisedWithWord('confirmDeleteAccountRoute'),
@@ -98,25 +100,25 @@ class NavigationService {
               userPassword: userPassword,
             );
           }),
-    );
+    );*/
   }
 
   Future<bool> navigateToDeleteAccount({@required BuildContext context}) async {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute(
           slidableKey: _getKeyRandomisedWithWord('deleteAccountRoute'),
           builder: (BuildContext context) {
             return OBDeleteAccountPage();
           }),
-    );
+    );*/
   }
 
   Future<bool> navigateToConfirmAddCommunityModerator(
       {@required Community community,
       @required User user,
       @required BuildContext context}) async {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<bool>(
           slidableKey: _getKeyRandomisedWithWord(
@@ -127,14 +129,14 @@ class NavigationService {
               user: user,
             );
           }),
-    );
+    );*/
   }
 
   Future<bool> navigateToConfirmBanCommunityUser(
       {@required Community community,
       @required User user,
       @required BuildContext context}) async {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<bool>(
           slidableKey:
@@ -145,12 +147,12 @@ class NavigationService {
               user: user,
             );
           }),
-    );
+    );*/
   }
 
   Future<void> navigateToManageCommunity(
       {@required Community community, @required BuildContext context}) {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey:
@@ -160,12 +162,12 @@ class NavigationService {
               community: community,
             );
           }),
-    );
+    );*/
   }
 
   Future<void> navigateToLeaveCommunity(
       {@required Community community, @required BuildContext context}) {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('leaveCommunityPageRoute'),
@@ -174,12 +176,12 @@ class NavigationService {
               community: community,
             );
           }),
-    );
+    );*/
   }
 
   Future<void> navigateToDeleteCommunity(
       {@required Community community, @required BuildContext context}) {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('deleteCommunityPageRoute'),
@@ -188,12 +190,12 @@ class NavigationService {
               community: community,
             );
           }),
-    );
+    );*/
   }
 
   Future<void> navigateToCommunityAdministrators(
       {@required Community community, @required BuildContext context}) {
-    return Navigator.push(
+   /* return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey:
@@ -203,12 +205,12 @@ class NavigationService {
               community: community,
             );
           }),
-    );
+    );*/
   }
 
   Future<void> navigateToCommunityMembers(
       {@required Community community, @required BuildContext context}) {
-    return Navigator.push(
+  /*  return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('communityMembersPageRoute'),
@@ -217,12 +219,12 @@ class NavigationService {
               community: community,
             );
           }),
-    );
+    );*/
   }
 
   Future<void> navigateToCommunityModerators(
       {@required Community community, @required BuildContext context}) {
-    return Navigator.push(
+   /* return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey:
@@ -232,12 +234,12 @@ class NavigationService {
               community: community,
             );
           }),
-    );
+    );*/
   }
 
   Future<void> navigateToCommunityBannedUsers(
       {@required Community community, @required BuildContext context}) {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey:
@@ -247,12 +249,12 @@ class NavigationService {
               community: community,
             );
           }),
-    );
+    );*/
   }
 
   Future<void> navigateToCommunityClosedPosts(
       {@required Community community, @required BuildContext context}) {
-    return Navigator.push(
+   /* return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey:
@@ -262,12 +264,12 @@ class NavigationService {
               community,
             );
           }),
-    );
+    );*/
   }
 
   Future navigateToCommentPost(
       {@required Post post, @required BuildContext context}) {
-    return Navigator.push(
+    /*return Navigator.push(
         context,
         OFSlideRightRoute<dynamic>(
             slidableKey: _getKeyRandomisedWithWord('commentPostPageRoute'),
@@ -277,12 +279,12 @@ class NavigationService {
                   post: post,
                   showPostPreview: true,
                   autofocusCommentInput: true);
-            }));
+            }));*/
   }
 
   Future<void> navigateToPostComments(
       {@required Post post, @required BuildContext context}) {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('postCommentsPageRoute'),
@@ -293,7 +295,7 @@ class NavigationService {
                 pageType: PostCommentsPageType.comments,
                 autofocusCommentInput: false);
           }),
-    );
+    );*/
   }
 
   Future<void> navigateToPostCommentReplies(
@@ -302,7 +304,7 @@ class NavigationService {
       @required BuildContext context,
       Function(PostComment) onReplyDeleted,
       Function(PostComment) onReplyAdded}) {
-    return Navigator.push(
+   /* return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('postCommentRepliesPageRoute'),
@@ -316,12 +318,12 @@ class NavigationService {
                 onCommentAdded: onReplyAdded,
                 autofocusCommentInput: false);
           }),
-    );
+    );*/
   }
 
   Future<void> navigateToPostCommentsLinked(
       {@required PostComment postComment, @required BuildContext context}) {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('postCommentsLinkedPageRoute'),
@@ -333,14 +335,14 @@ class NavigationService {
                 linkedPostComment: postComment,
                 autofocusCommentInput: false);
           }),
-    );
+    );*/
   }
 
   Future<void> navigateToPostCommentRepliesLinked(
       {@required PostComment postComment,
       @required PostComment parentComment,
       @required BuildContext context}) {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey:
@@ -354,77 +356,77 @@ class NavigationService {
                 linkedPostComment: postComment,
                 autofocusCommentInput: false);
           }),
-    );
+    );*/
   }
 
   Future navigateToPost({@required Post post, @required BuildContext context}) {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('postPageRoute'),
           builder: (BuildContext context) {
             return OBPostPage(post);
           }),
-    );
+    );*/
   }
 
   Future navigateToSettingsPage({@required BuildContext context}) {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('settingsPageRoute'),
           builder: (BuildContext context) {
             return OBSettingsPage();
           }),
-    );
+    );*/
   }
 
   Future navigateToFollowersPage({@required BuildContext context}) {
-    return Navigator.push(
+   /* return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('followersPageRoute'),
           builder: (BuildContext context) {
             return OBFollowersPage();
           }),
-    );
+    );*/
   }
 
   Future navigateToFollowingPage({@required BuildContext context}) {
-    return Navigator.push(
+   /* return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('followingPageRoute'),
           builder: (BuildContext context) {
             return OBFollowingPage();
           }),
-    );
+    );*/
   }
 
   Future navigateToAccountSettingsPage({@required BuildContext context}) {
-    return Navigator.push(
+   /* return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('accountSettingsPageRoute'),
           builder: (BuildContext context) {
             return OBAccountSettingsPage();
           }),
-    );
+    );*/
   }
 
   Future navigateToDeveloperSettingsPage({@required BuildContext context}) {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('developerSettingsPageRoute'),
           builder: (BuildContext context) {
             return OBDeveloperSettingsPage();
           }),
-    );
+    );*/
   }
 
   Future navigateToApplicationSettingsPage({@required BuildContext context}) {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey:
@@ -432,56 +434,56 @@ class NavigationService {
           builder: (BuildContext context) {
             return OBApplicationSettingsPage();
           }),
-    );
+    );*/
   }
 
   Future navigateToAboutPage({@required BuildContext context}) {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('aboutPage'),
           builder: (BuildContext context) {
             return OBAboutPage();
           }),
-    );
+    );*/
   }
 
   Future navigateToThemesPage({@required BuildContext context}) {
-    return Navigator.push(
+   /* return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('themesPageRoute'),
           builder: (BuildContext context) {
             return OBThemesPage();
           }),
-    );
+    );*/
   }
 
   Future navigateToUsefulLinksPage({@required BuildContext context}) {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('usefulLinksPageRoute'),
           builder: (BuildContext context) {
             return OBUsefulLinksPage();
           }),
-    );
+    );*/
   }
 
   Future navigateToCommunityGuidelinesPage({@required BuildContext context}) {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('communityGuidelinesPage'),
           builder: (BuildContext context) {
             return OBCommunityGuidelinesPage();
           }),
-    );
+    );*/
   }
 
   Future navigateToConfirmRejectGuidelinesPage(
       {@required BuildContext context}) {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey:
@@ -489,10 +491,10 @@ class NavigationService {
           builder: (BuildContext context) {
             return OBConfirmRejectGuidelines();
           }),
-    );
+    );*/
   }
 
-  Future<OBNewPostData> navigateToSharePost(
+  /*Future<OBNewPostData> navigateToSharePost(
       {@required BuildContext context,
       @required OBNewPostData createPostData}) {
     return Navigator.push(
@@ -537,31 +539,31 @@ class NavigationService {
             );
           }),
     );
-  }
+  }*/
 
   Future navigateToFollowsLists({@required BuildContext context}) {
-    return Navigator.push(
+   /* return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('navigateToFollowsLists'),
           builder: (BuildContext context) {
             return OBFollowsListsPage();
           }),
-    );
+    );*/
   }
 
   Future navigateToUserInvites({@required BuildContext context}) {
-    return Navigator.push(
+   /* return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('userInvitesPageRoute'),
           builder: (BuildContext context) {
             return OBUserInvitesPage();
           }),
-    );
+    );*/
   }
 
-  Future navigateToShareInvite(
+  /*Future navigateToShareInvite(
       {@required BuildContext context, @required UserInvite userInvite}) {
     return Navigator.push(
       context,
@@ -572,9 +574,9 @@ class NavigationService {
                 userInvite: userInvite, showEdit: false);
           }),
     );
-  }
+  }*/
 
-  Future navigateToInviteDetailPage(
+/*  Future navigateToInviteDetailPage(
       {@required BuildContext context, @required UserInvite userInvite}) {
     return Navigator.push(
       context,
@@ -585,29 +587,29 @@ class NavigationService {
                 userInvite: userInvite, showEdit: true);
           }),
     );
-  }
+  }*/
 
   Future navigateToConnectionsCircles({@required BuildContext context}) {
-    return Navigator.push(
+   /* return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('connectionsCirclesPageRoute'),
           builder: (BuildContext context) {
             return OBConnectionsCirclesPage();
           }),
-    );
+    );*/
   }
 
   Future navigateToConnectionsCircle(
       {@required Circle connectionsCircle, @required BuildContext context}) {
-    return Navigator.push(
+   /* return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('connectionsCirclePageRoute'),
           builder: (BuildContext context) {
-            return OBConnectionsCirclePage(connectionsCircle);
+            return OFConnectionsCirclePage(connectionsCircle);
           }),
-    );
+    );*/
   }
 
   Future navigateToFollowsList({
@@ -619,7 +621,7 @@ class NavigationService {
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('followsListPageRoute'),
           builder: (BuildContext context) {
-            return OBFollowsListPage(followsList);
+            //return OBFollowsListPage(followsList);
           }),
     );
   }
@@ -634,11 +636,11 @@ class NavigationService {
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('postReactionsPageRoute'),
           builder: (BuildContext context) {
-            return OBPostReactionsModal(
+           /* return OBPostReactionsModal(
               post: post,
               reactionsEmojiCounts: reactionsEmojiCounts,
               reactionEmoji: reactionEmoji,
-            );
+            );*/
           }),
     );
   }
@@ -655,12 +657,12 @@ class NavigationService {
           slidableKey:
               _getKeyRandomisedWithWord('postCommentReactionsPageRoute'),
           builder: (BuildContext context) {
-            return OBPostCommentReactionsModal(
+            /*return OBPostCommentReactionsModal(
               post: post,
               postComment: postComment,
               reactionsEmojiCounts: reactionsEmojiCounts,
               reactionEmoji: reactionEmoji,
-            );
+            );*/
           }),
     );
   }
@@ -674,7 +676,7 @@ class NavigationService {
           slidableKey:
               _getKeyRandomisedWithWord('notificationsSettingsPageRoute'),
           builder: (BuildContext context) {
-            return OBNotificationsSettingsPage();
+            //return OBNotificationsSettingsPage();
           }),
     );
   }
@@ -688,7 +690,7 @@ class NavigationService {
           slidableKey:
               _getKeyRandomisedWithWord('userLanguageSettingsPageRoute'),
           builder: (BuildContext context) {
-            return OBUserLanguageSettingsPage();
+            //return OBUserLanguageSettingsPage();
           }),
     );
   }
@@ -701,7 +703,7 @@ class NavigationService {
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('blockedUsersPageRoute'),
           builder: (BuildContext context) {
-            return OBBlockedUsersPage();
+            //return OBBlockedUsersPage();
           }),
     );
   }
@@ -714,7 +716,7 @@ class NavigationService {
       OFSlideRightRoute<dynamic>(
           slidableKey: Key('topPostsExcludedCommunitiesPageRoute'),
           builder: (BuildContext context) {
-            return OBTopPostsExcludedCommunitiesPage();
+            //return OBTopPostsExcludedCommunitiesPage();
           }),
     );
   }
@@ -727,7 +729,7 @@ class NavigationService {
       OFSlideRightRoute<dynamic>(
           slidableKey: Key('topPostsSettingsPageRoute'),
           builder: (BuildContext context) {
-            return OBTopPostsSettingsPage();
+            //return OBTopPostsSettingsPage();
           }),
     );
   }
@@ -739,14 +741,14 @@ class NavigationService {
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('confirmBlockUserPageRoute'),
           builder: (BuildContext context) {
-            return OBConfirmBlockUserModal(
+           /* return OBConfirmBlockUserModal(
               user: user,
-            );
+            );*/
           }),
     );
   }
 
-  Future<bool> navigateToConfirmReportObject(
+ /* Future<bool> navigateToConfirmReportObject(
       {@required BuildContext context,
       @required dynamic object,
       Map<String, dynamic> extraData,
@@ -783,9 +785,9 @@ class NavigationService {
             );
           }),
     );
-  }
+  }*/
 
-  Future<void> navigateToCommunityModeratedObjects(
+ /* Future<void> navigateToCommunityModeratedObjects(
       {@required BuildContext context, @required Community community}) async {
     return Navigator.push(
       context,
@@ -811,9 +813,9 @@ class NavigationService {
             return OBModeratedObjectsPage();
           }),
     );
-  }
+  }*/
 
-  Future<void> navigateToModeratedObjectReports(
+  /*Future<void> navigateToModeratedObjectReports(
       {@required BuildContext context,
       @required ModeratedObject moderatedObject}) async {
     return Navigator.push(
@@ -826,9 +828,9 @@ class NavigationService {
             );
           }),
     );
-  }
+  }*/
 
-  Future<void> navigateToModeratedObjectGlobalReview(
+  /*Future<void> navigateToModeratedObjectGlobalReview(
       {@required BuildContext context,
       @required ModeratedObject moderatedObject}) async {
     return Navigator.push(
@@ -842,9 +844,9 @@ class NavigationService {
             );
           }),
     );
-  }
+  }*/
 
-  Future<void> navigateToModeratedObjectCommunityReview(
+  /*Future<void> navigateToModeratedObjectCommunityReview(
       {@required BuildContext context,
       @required Community community,
       @required ModeratedObject moderatedObject}) async {
@@ -860,7 +862,7 @@ class NavigationService {
             );
           }),
     );
-  }
+  }*/
 
   Future<void> navigateToMyModerationTasksPage(
       {@required BuildContext context}) async {
@@ -869,7 +871,7 @@ class NavigationService {
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('myModerationTasksPageRoute'),
           builder: (BuildContext context) {
-            return OBMyModerationTasksPage();
+            //return OBMyModerationTasksPage();
           }),
     );
   }
@@ -882,7 +884,7 @@ class NavigationService {
           slidableKey:
               _getKeyRandomisedWithWord('myModerationPenaltiesPageRoute'),
           builder: (BuildContext context) {
-            return OBMyModerationPenaltiesPage();
+            //return OBMyModerationPenaltiesPage();
           }),
     );
   }
@@ -899,12 +901,12 @@ class NavigationService {
               _getKeyRandomisedWithWord('blankPageWithWidgetPageRoute'),
           builder: (BuildContext context) {
             return CupertinoPageScaffold(
-              navigationBar: OBThemedNavigationBar(
+           /*   navigationBar: OBThemedNavigationBar(
                 title: navBarTitle,
               ),
               child: OBPrimaryColorContainer(
                 child: widget,
-              ),
+              ),*/
             );
           }),
     );
@@ -914,7 +916,7 @@ class NavigationService {
       {@required Hashtag hashtag,
       String rawHashtagName,
       @required BuildContext context}) async {
-    return Navigator.push(
+    /*return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('hashtagRoute'),
@@ -922,7 +924,7 @@ class NavigationService {
             return OBHashtagPage(
                 hashtag: hashtag, rawHashtagName: rawHashtagName);
           }),
-    );
+    );*/
   }
 
   Future<void> navigateToProfilePostsExcludedCommunities(
@@ -934,10 +936,10 @@ class NavigationService {
       OFSlideRightRoute<dynamic>(
           slidableKey: Key('profilePostsExcludedCommunitiesPageRoute'),
           builder: (BuildContext context) {
-            return OBProfilePostsExcludedCommunitiesPage(
+            /*return OBProfilePostsExcludedCommunitiesPage(
               onExcludedCommunitiesAdded: onExcludedCommunitiesAdded,
               onExcludedCommunityRemoved: onExcludedCommunityRemoved,
-            );
+            );*/
           }),
     );
   }
@@ -954,12 +956,12 @@ class NavigationService {
       OFSlideRightRoute<dynamic>(
           slidableKey: Key('excludeCommunitiesFromProfilePostsPage'),
           builder: (BuildContext context) {
-            return OBManageProfilePage(
+           /* return OBManageProfilePage(
               user,
               onUserProfileUpdated: onUserProfileUpdated,
               onExcludedCommunitiesAdded: onExcludedCommunitiesAdded,
               onExcludedCommunityRemoved: onExcludedCommunityRemoved,
-            );
+            );*/
           }),
     );
   }
@@ -972,7 +974,7 @@ class NavigationService {
       OFSlideRightRoute<dynamic>(
           slidableKey: Key('excludeCommunitiesFromProfilePostsPage'),
           builder: (BuildContext context) {
-            return OBFollowRequestsPage();
+            //return OBFollowRequestsPage();
           }),
     );
   }

@@ -3,37 +3,242 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
+import 'package:onef/models/circle.dart';
+import 'package:onef/models/community.dart';
+import 'package:onef/models/follows_list.dart';
+import 'package:onef/models/hashtag.dart';
+import 'package:onef/models/post.dart';
+import 'package:onef/models/post_comment.dart';
+import 'package:onef/models/post_comment_reaction.dart';
+import 'package:onef/models/post_reaction.dart';
+import 'package:onef/models/user.dart';
 import 'package:onef/pages/home/bottom_sheets/confirm_action.dart';
 import 'package:onef/pages/home/bottom_sheets/image_picker.dart';
+import 'package:onef/pages/home/bottom_sheets/react_to_post.dart';
 import 'package:onef/pages/home/bottom_sheets/video_picker.dart';
-import 'package:onef/pages/home/bottom_sheets/videos_autoplay_setting_picker.dart';
-import 'package:onef/pages/home/pages/task/widgets/add_task.dart';
 import 'package:onef/services/user_preferences.dart';
+import 'package:onef/widgets/post/post.dart';
 
-class          BottomSheetService {
+class BottomSheetService {
   bool hasActiveBottomSheet = false;
 
-  Future<void> showAddTask({@required BuildContext context}) async {
+  Future<PostReaction> showReactToPost(
+      {@required Post post, @required BuildContext context}) async {
     return _showModalBottomSheetApp(
         context: context,
         builder: (BuildContext context) {
           return Material(
-            child: OFAddTaskBottomSheet(),
+            child: OFReactToPostBottomSheet(post),
           );
         });
   }
 
-  Future<void> showVideosAutoPlaySettingPicker(
-      {@required BuildContext context,
-      ValueChanged<VideosAutoPlaySetting> onChanged,
-      VideosAutoPlaySetting initialValue}) {
+  Future<PostCommentReaction> showReactToPostComment(
+      {@required PostComment postComment,
+        @required Post post,
+        @required BuildContext context}) async {
     return _showModalBottomSheetApp(
         context: context,
         builder: (BuildContext context) {
-          return OFVideosAutoPlaySettingPickerBottomSheet(
-              onTypeChanged: onChanged, initialValue: initialValue);
+         /* return Material(
+            child: OFReactToPostCommentBottomSheet(
+                postComment: postComment, post: post),
+          );*/
         });
   }
+
+  /*void showConnectionsCirclesPicker(
+      {@required BuildContext context,
+        @required String title,
+        @required String actionLabel,
+        @required OnPickedCircles onPickedCircles,
+        List<Circle> initialPickedCircles}) {
+    _showModalBottomSheetApp(
+        context: context,
+        builder: (BuildContext context) {
+          return OFConnectionCirclesPickerBottomSheet(
+            initialPickedCircles: initialPickedCircles,
+            title: title,
+            actionLabel: actionLabel,
+            onPickedCircles: onPickedCircles,
+          );
+        });
+  }*/
+
+  Future<void> showCommunityTypePicker(
+      {@required BuildContext context,
+        ValueChanged<CommunityType> onChanged,
+        CommunityType initialType}) {
+    return _showModalBottomSheetApp(
+        context: context,
+        builder: (BuildContext context) {
+          /*return OFCommunityTypePickerBottomSheet(
+              onTypeChanged: onChanged, initialType: initialType);*/
+        });
+  }
+
+
+  Future<void> showUserVisibilityPicker(
+      {@required BuildContext context}) {
+    return _showModalBottomSheetApp(
+        context: context,
+        builder: (BuildContext context) {
+          //return OFUserVisibilityPickerBottomSheet();
+        });
+  }
+
+  Future<void> showVideosSoundSettingPicker(
+      {@required BuildContext context,
+        ValueChanged<VideosSoundSetting> onChanged,
+        VideosSoundSetting initialValue}) {
+    return _showModalBottomSheetApp(
+        context: context,
+        builder: (BuildContext context) {
+         /* return OFVideosSoundSettingPickerBottomSheet(
+              onTypeChanged: onChanged, initialValue: initialValue);*/
+        });
+  }
+
+/*  Future<void> showHashtagsDisplaySettingPicker(
+      {@required BuildContext context,
+        ValueChanged<HashtagsDisplaySetting> onChanged,
+        HashtagsDisplaySetting initialValue}) {
+    return _showModalBottomSheetApp(
+        context: context,
+        builder: (BuildContext context) {
+          return OFHashtagsDisplaySettingPickerBottomSheet(
+              onTypeChanged: onChanged, initialValue: initialValue);
+        });
+  }*/
+
+  Future<void> showVideosAutoPlaySettingPicker(
+      {@required BuildContext context,
+        ValueChanged<VideosAutoPlaySetting> onChanged,
+        VideosAutoPlaySetting initialValue}) {
+    return _showModalBottomSheetApp(
+        context: context,
+        builder: (BuildContext context) {
+         /* return OFVideosAutoPlaySettingPickerBottomSheet(
+              onTypeChanged: onChanged, initialValue: initialValue);*/
+        });
+  }
+
+  Future<void> showLinkPreviewsSettingPicker(
+      {@required BuildContext context,
+        ValueChanged<LinkPreviewsSetting> onChanged,
+        LinkPreviewsSetting initialValue}) {
+    return _showModalBottomSheetApp(
+        context: context,
+        builder: (BuildContext context) {
+         /* return OFLinkPreviewsSettingPickerBottomSheet(
+              onTypeChanged: onChanged, initialValue: initialValue);*/
+        });
+  }
+
+  Future<List<FollowsList>> showFollowsListsPicker(
+      {@required BuildContext context,
+        @required String title,
+        @required String actionLabel,
+        List<FollowsList> initialPickedFollowsLists}) {
+    return _showModalBottomSheetApp(
+        context: context,
+        builder: (BuildContext context) {
+         /* return OBFollowsListsPickerBottomSheet(
+            initialPickedFollowsLists: initialPickedFollowsLists,
+            title: title,
+            actionLabel: actionLabel,
+          );*/
+        });
+  }
+  Future<void> showPostActions(
+      {@required BuildContext context,
+        @required Post post,
+        @required OFPostDisplayContext displayContext,
+        @required OnPostDeleted onPostDeleted,
+        @required ValueChanged<Post> onPostReported,
+        ValueChanged<Community> onPostCommunityExcludedFromProfilePosts,
+        Function onCommunityExcluded,
+        Function onUndoCommunityExcluded,
+        List<FollowsList> initialPickedFollowsLists}) {
+    return _showModalBottomSheetApp(
+        context: context,
+        builder: (BuildContext context) {
+          /*return OFPostActionsBottomSheet(
+            post: post,
+            displayContext: displayContext,
+            onCommunityExcluded: onCommunityExcluded,
+            onUndoCommunityExcluded: onUndoCommunityExcluded,
+            onPostCommunityExcludedFromProfilePosts: onPostCommunityExcludedFromProfilePosts,
+            onPostDeleted: onPostDeleted,
+            onPostReported: onPostReported,
+          );*/
+        });
+  }
+
+  Future<void> showHashtagActions(
+      {@required BuildContext context,
+        @required Hashtag hashtag,
+        @required ValueChanged<Hashtag> onHashtagReported}) {
+    return _showModalBottomSheetApp(
+        context: context,
+        builder: (BuildContext context) {
+          /*return OFHashtagActionsBottomSheet(
+            hashtag: hashtag,
+            onHashtagReported: onHashtagReported,
+          );*/
+        });
+  }
+
+  Future<void> showUserActions(
+      {@required BuildContext context, @required User user}) {
+    return _showModalBottomSheetApp(
+        context: context,
+        builder: (BuildContext context) {
+         /* return OFUserActionsBottomSheet(
+            user,
+          );*/
+        });
+  }
+
+ /* Future<void> showCommunityActions(
+      {@required BuildContext context,
+        @required Community community,
+        OnCommunityReported onCommunityReported}) {
+    return _showModalBottomSheetApp(
+        context: context,
+        builder: (BuildContext context) {
+          return OFCommunityActionsBottomSheet(
+            community: community,
+            onCommunityReported: onCommunityReported,
+          );
+        });
+  }*/
+
+  Future<void> showMoreCommentActions({
+    @required BuildContext context,
+    @required Post post,
+    @required PostComment postComment,
+    @required ValueChanged<PostComment> onPostCommentDeleted,
+    @required ValueChanged<PostComment> onPostCommentReported,
+  }) {
+    return _showModalBottomSheetApp(
+        context: context,
+        builder: (BuildContext context) {
+          /*return OFPostCommentMoreActionsBottomSheet(
+              onPostCommentReported: onPostCommentReported,
+              onPostCommentDeleted: onPostCommentDeleted,
+              post: post,
+              postComment: postComment);*/
+        });
+  }
+
+/*  Future<MediaFile> showCameraPicker({@required BuildContext context}) {
+    return _showModalBottomSheetApp(
+        context: context,
+        builder: (BuildContext context) {
+          return OFCameraPickerBottomSheet();
+        });
+  }*/
 
   Future<File> showVideoPicker({@required BuildContext context}) {
     return _showModalBottomSheetApp(
@@ -55,6 +260,7 @@ class          BottomSheetService {
     @required BuildContext context,
     String title,
     String subtitle,
+    String description,
     String confirmText,
     String cancelText,
     @required ActionCompleter actionCompleter,
@@ -65,6 +271,7 @@ class          BottomSheetService {
           return OFConfirmActionBottomSheet(
             title: title,
             subtitle: subtitle,
+            //description: description,
             confirmText: confirmText,
             cancelText: cancelText,
             actionCompleter: actionCompleter,
@@ -84,7 +291,7 @@ class          BottomSheetService {
     dismissActiveBottomSheet(context: context);
     hasActiveBottomSheet = true;
     final result =
-        await showModalBottomSheetApp(context: context, builder: builder);
+    await showModalBottomSheetApp(context: context, builder: builder);
     hasActiveBottomSheet = false;
     return result;
   }
@@ -154,7 +361,7 @@ class _ModalBottomSheetState<T> extends State<_ModalBottomSheet<T>> {
                           widget.route.animation.value, bottomInset),
                       child: new BottomSheet(
                           animationController:
-                              widget.route._animationController,
+                          widget.route._animationController,
                           onClosing: () => Navigator.pop(context),
                           builder: widget.route.builder)));
             }));

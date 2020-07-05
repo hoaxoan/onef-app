@@ -1,5 +1,8 @@
 import 'package:dcache/dcache.dart';
+import 'package:onef/models/community.dart';
 import 'package:onef/models/language.dart';
+import 'package:onef/models/post.dart';
+import 'package:onef/models/post_comment.dart';
 import 'package:onef/models/updatable_model.dart';
 import 'package:onef/models/user_notifications_settings.dart';
 import 'package:onef/models/user_profile.dart';
@@ -291,6 +294,38 @@ class User extends UpdatableModel<User> {
   bool canBlockOrUnblockUser(User user) {
     return user.id != id;
   }
+
+  bool canDisableOrEnableCommentsForPost(Post post) {
+    User loggedInUser = this;
+    bool _canDisableOrEnableComments = false;
+
+    if (post.hasCommunity()) {
+      Community postCommunity = post.community;
+
+      if (postCommunity.isAdministrator(loggedInUser) ||
+          postCommunity.isModerator(loggedInUser)) {
+        _canDisableOrEnableComments = true;
+      }
+    }
+    return _canDisableOrEnableComments;
+  }
+
+  bool canTranslatePostComment(PostComment postComment, Post post) {
+    if ((!post.hasCommunity() && post.isEncircledPost()) ||
+        language?.code == null) return false;
+
+    return postComment.hasLanguage() &&
+        postComment.getLanguage().code != language.code;
+  }
+
+  bool canTranslatePost(Post post) {
+    if ((!post.hasCommunity() && post.isEncircledPost()) ||
+        language?.code == null) return false;
+
+    return post.hasLanguage() && post.getLanguage().code != language.code;
+  }
+
+
 }
 
 class UserFactory extends UpdatableModelFactory<User> {
