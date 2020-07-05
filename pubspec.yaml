@@ -1,0 +1,119 @@
+name: onef
+description: A new Flutter project.
+
+version: 1.0.0+1
+
+environment:
+  # The pub client defaults to an <2.0.0 sdk constraint which we need to explicitly overwrite.
+  sdk: ">=2.2.2 <3.0.0"
+
+dependencies:
+  html: ^0.14.0+2
+  expandable: ^2.2.2+3
+  uuid: ^2.0.1
+  flutter_image_compress: ^0.6.3
+  connectivity: ^0.4.4
+  flutter_widgets: ^0.1.6
+  http_retry: ^0.1.1+3
+  video_thumbnail: ^0.1.5+1
+  flutter_ffmpeg: ^0.2.10
+  retry: ^3.0.0+1
+  shared_preferences: ^0.5.7+3
+  flutter_markdown: ^0.2.0
+  file_picker: ^1.4.2
+  sentry: ^2.2.0
+  screen: ^0.0.5
+  back_button_interceptor: ^4.0.1
+  flutter_colorpicker: any
+  intercom_flutter: ^2.0.7
+  device_info: ^0.4.0+1
+  flutter_pagewise: ^1.2.2
+  tinycolor: ^1.0.2
+  onesignal_flutter: ^2.2.0
+  flutter_advanced_networkimage: any
+  dcache: ^0.1.0
+  validators: ^1.0.0+1
+  url_launcher: ^4.0.1
+  uni_links: ^0.1.4
+  flutter_slidable: "^0.4.9"
+  flutter_cache_manager: ^1.1.1
+  cached_network_image: ^2.0.0-rc
+  timeago: ^2.0.9
+  public_suffix: ^1.2.0
+  pigment: ^1.0.3
+  photo_view: ^0.4.2
+  flutter_svg: ^0.17.4
+  flutter_secure_storage: ^3.3.1+1
+  mime: ^0.9.6+2
+  http: ^0.12.0
+  intl: ^0.16.0
+  throttling: ^0.8.0
+  wakelock: ^0.1.3
+  rxdart: ^0.18.1
+  sprintf: "^4.0.0"
+  image_picker: 0.6.1+10
+  image_cropper: ^1.0.1
+  shimmer: ^1.0.0
+  share: ^0.6.3+5
+  path: ^1.6.2
+  package_info: ^0.4.0+13
+  flutter_staggered_grid_view: ^0.3.0
+  flutter_sticky_header: ^0.4.2
+
+  firebase_core: ^0.4.5
+  cloud_firestore: ^0.13.7
+  firebase_storage: ^3.1.6
+  firebase_auth: ^0.16.1
+  google_sign_in: ^4.5.1
+
+  inview_notifier_list:
+    git:
+      url: https://github.com/OkunaOrg/inview_notifier_list.git
+      ref: c74749a052f91fbdd11fad959c2c59d0d10c7695
+
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.2
+  google_fonts: ^0.3.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://www.dartlang.org/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+  fonts:
+    - family: GoogleSans
+      fonts:
+        - asset: assets/fonts/GoogleSans-Regular.ttf
+        - asset: assets/fonts/GoogleSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/GoogleSans-Bold.ttf
+          weight: 700
+    - family: ReflectlyIcons
+      fonts:
+        - asset: assets/fonts/ReflectlyIcons.ttf
+    - family:  NotesCustomIcons
+      fonts:
+        - asset: assets/fonts/NotesCustomIcons.ttf
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/
+    - assets/images/splash-background.png
+    - assets/images/openbook-o-logo.png
+    - .env.json
+# PUBSPEC CHECKSUM: ba0e

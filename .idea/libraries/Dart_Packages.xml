@@ -1,0 +1,1196 @@
+<component name="libraryTable">
+  <library name="Dart Packages" type="DartPackagesLibraryType">
+    <properties>
+      <option name="packageNameToDirsMap">
+        <entry key="_fe_analyzer_shared">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/_fe_analyzer_shared-1.0.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="after_layout">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/after_layout-1.0.7+2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="analyzer">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/analyzer-0.39.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="archive">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/archive-2.0.13/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="args">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/args-1.6.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="async">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.4.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="back_button_interceptor">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/back_button_interceptor-4.2.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="boolean_selector">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.0.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="cached_network_image">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cached_network_image-2.0.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="charcode">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/charcode-1.1.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="cloud_firestore">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.13.7/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="cloud_firestore_platform_interface">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_platform_interface-1.1.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="cloud_firestore_web">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.1.1+2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="collection">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.12/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="connectivity">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity-0.4.6+2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="convert">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/convert-2.1.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="coverage">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/coverage-0.13.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="crypto">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-2.1.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="csslib">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/csslib-0.16.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="cupertino_icons">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-0.1.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="dcache">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/dcache-0.1.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="device_info">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/device_info-0.4.0+2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="expandable">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/expandable-2.2.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="file">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/file-5.2.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="file_picker">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/file_picker-1.4.3+2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase-7.3.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_auth">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.16.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_auth_platform_interface">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_platform_interface-1.1.8/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_auth_web">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.1.3+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_core">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_core_platform_interface">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_platform_interface-1.0.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_core_web">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_storage">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-3.1.6/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/packages/flutter/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_advanced_networkimage">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_advanced_networkimage-0.7.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_cache_manager">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_cache_manager-1.1.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_colorpicker">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_colorpicker-0.2.6/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_ffmpeg">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_ffmpeg-0.2.10/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_image_compress">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_image_compress-0.6.5+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_localizations">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/packages/flutter_localizations/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_markdown">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_markdown-0.2.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_pagewise">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_pagewise-1.2.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_secure_storage">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage-3.3.1+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_slidable">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_slidable-0.4.9/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_staggered_grid_view">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_staggered_grid_view-0.3.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_sticky_header">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_sticky_header-0.4.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_svg">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_svg-0.17.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_test">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/packages/flutter_test/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_web_plugins">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/packages/flutter_web_plugins/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_widgets">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_widgets-0.1.9/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="glob">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/glob-1.2.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="google_fonts">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/google_fonts-0.3.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="google_sign_in">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-4.5.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="google_sign_in_platform_interface">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in_platform_interface-1.1.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="google_sign_in_web">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in_web-0.9.1+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="html">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/html-0.14.0+3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="http">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.12.0+4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="http_multi_server">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/http_multi_server-2.1.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="http_parser">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-3.1.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="http_retry">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/http_retry-0.1.1+3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/image-2.1.12/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image_cropper">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/image_cropper-1.2.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image_picker">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.6.1+10/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="intercom_flutter">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/intercom_flutter-2.0.7/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="intl">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.16.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="inview_notifier_list">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/git/inview_notifier_list-c74749a052f91fbdd11fad959c2c59d0d10c7695/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="io">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/io-0.3.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="js">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.1+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="logging">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/logging-0.11.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="markdown">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/markdown-2.1.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="matcher">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.6/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="meta">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.1.8/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="mime">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/mime-0.9.6+3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="multi_server_socket">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/multi_server_socket-1.0.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="node_interop">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/node_interop-1.0.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="node_io">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/node_io-1.0.1+2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="node_preamble">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/node_preamble-1.4.8/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="onesignal_flutter">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/onesignal_flutter-2.3.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="package_config">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/package_config-1.9.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="package_info">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/package_info-0.4.0+13/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="package_resolver">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/package_resolver-1.0.10/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="path">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.6.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="path_drawing">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path_drawing-0.4.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="path_parsing">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path_parsing-0.1.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="path_provider">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.6.11/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="path_provider_linux">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-0.0.1+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="path_provider_macos">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-0.0.4+3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="path_provider_platform_interface">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_platform_interface-1.0.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="pedantic">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.8.0+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="petitparser">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/petitparser-2.4.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="photo_view">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/photo_view-0.4.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="pigment">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/pigment-1.0.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="platform">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/platform-2.2.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="plugin_platform_interface">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-1.0.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="pool">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/pool-1.4.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="process">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/process-3.0.13/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="pub_semver">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/pub_semver-1.4.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="public_suffix">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/public_suffix-1.2.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="punycode">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/punycode-0.1.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="quiver">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/quiver-2.1.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="retry">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/retry-3.0.0+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="rxdart">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/rxdart-0.18.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="screen">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/screen-0.0.5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="sentry">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/sentry-2.3.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="share">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/share-0.6.3+5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="shared_preferences">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.7+3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="shared_preferences_macos">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-0.0.1+4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="shared_preferences_platform_interface">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_platform_interface-1.0.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="shared_preferences_web">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-0.1.2+3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="shelf">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shelf-0.7.5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="shelf_packages_handler">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shelf_packages_handler-1.0.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="shelf_static">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shelf_static-0.2.8/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="shelf_web_socket">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shelf_web_socket-0.2.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="shimmer">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shimmer-1.0.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="sky_engine">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/bin/cache/pkg/sky_engine/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="source_map_stack_trace">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/source_map_stack_trace-2.0.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="source_maps">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/source_maps-0.10.8/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="source_span">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.7.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="sprintf">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/sprintf-4.0.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="sqflite">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-1.2.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="stack_trace">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/stack_trace-1.9.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="stream_channel">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/stream_channel-2.0.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="stream_transform">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/stream_transform-0.0.20/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="string_scanner">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/string_scanner-1.0.5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="synchronized">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/synchronized-2.2.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="term_glyph">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/term_glyph-1.1.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="test">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/test-1.14.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="test_api">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.2.15/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="test_core">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/test_core-0.3.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="throttling">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/throttling-0.8.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="timeago">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/timeago-2.0.25/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="tinycolor">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/tinycolor-1.0.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="typed_data">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.1.6/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="uni_links">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/uni_links-0.1.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="url_launcher">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-4.2.0+3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="usage">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/usage-3.4.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="uuid">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/uuid-2.0.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="validators">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/validators-1.0.0+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="vector_math">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.0.8/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="video_thumbnail">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/video_thumbnail-0.1.7/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="vm_service">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/vm_service-2.3.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="wakelock">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/wakelock-0.1.3+4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="watcher">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/watcher-0.9.7+13/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="web_socket_channel">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/web_socket_channel-1.1.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="webkit_inspection_protocol">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/webkit_inspection_protocol-0.7.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="xdg_directories">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/xdg_directories-0.1.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="xml">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/xml-3.6.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="yaml">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/yaml-2.2.0/lib" />
+            </list>
+          </value>
+        </entry>
+      </option>
+    </properties>
+    <CLASSES>
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/git/inview_notifier_list-c74749a052f91fbdd11fad959c2c59d0d10c7695/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/_fe_analyzer_shared-1.0.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/after_layout-1.0.7+2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/analyzer-0.39.4/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/archive-2.0.13/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/args-1.6.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.4.1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/back_button_interceptor-4.2.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.0.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cached_network_image-2.0.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/charcode-1.1.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.13.7/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_platform_interface-1.1.2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.1.1+2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.12/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity-0.4.6+2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/convert-2.1.1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/coverage-0.13.4/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-2.1.4/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/csslib-0.16.1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-0.1.2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/dcache-0.1.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/device_info-0.4.0+2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/expandable-2.2.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/file-5.2.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/file_picker-1.4.3+2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase-7.3.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.16.1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_platform_interface-1.1.8/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.1.3+1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_platform_interface-1.0.4/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-3.1.6/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_advanced_networkimage-0.7.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_cache_manager-1.1.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_colorpicker-0.2.6/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_ffmpeg-0.2.10/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_image_compress-0.6.5+1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_markdown-0.2.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_pagewise-1.2.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage-3.3.1+1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_slidable-0.4.9/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_staggered_grid_view-0.3.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_sticky_header-0.4.2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_svg-0.17.4/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_widgets-0.1.9/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/glob-1.2.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/google_fonts-0.3.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-4.5.1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in_platform_interface-1.1.2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in_web-0.9.1+1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/html-0.14.0+3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.12.0+4/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/http_multi_server-2.1.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-3.1.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/http_retry-0.1.1+3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/image-2.1.12/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/image_cropper-1.2.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.6.1+10/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/intercom_flutter-2.0.7/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.16.1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/io-0.3.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.1+1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/logging-0.11.4/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/markdown-2.1.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.6/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.1.8/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/mime-0.9.6+3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/multi_server_socket-1.0.2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/node_interop-1.0.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/node_io-1.0.1+2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/node_preamble-1.4.8/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/onesignal_flutter-2.3.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/package_config-1.9.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/package_info-0.4.0+13/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/package_resolver-1.0.10/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.6.4/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path_drawing-0.4.1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path_parsing-0.1.4/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.6.11/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-0.0.1+1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-0.0.4+3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_platform_interface-1.0.2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.8.0+1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/petitparser-2.4.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/photo_view-0.4.2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/pigment-1.0.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/platform-2.2.1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-1.0.2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/pool-1.4.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/process-3.0.13/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/pub_semver-1.4.2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/public_suffix-1.2.1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/punycode-0.1.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/quiver-2.1.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/retry-3.0.0+1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/rxdart-0.18.1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/screen-0.0.5/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/sentry-2.3.1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/share-0.6.3+5/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.7+3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-0.0.1+4/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_platform_interface-1.0.1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-0.1.2+3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shelf-0.7.5/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shelf_packages_handler-1.0.4/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shelf_static-0.2.8/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shelf_web_socket-0.2.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shimmer-1.0.1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/source_map_stack_trace-2.0.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/source_maps-0.10.8/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.7.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/sprintf-4.0.2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-1.2.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/stack_trace-1.9.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/stream_channel-2.0.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/stream_transform-0.0.20/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/string_scanner-1.0.5/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/synchronized-2.2.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/term_glyph-1.1.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/test-1.14.4/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.2.15/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/test_core-0.3.4/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/throttling-0.8.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/timeago-2.0.25/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/tinycolor-1.0.2/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.1.6/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/uni_links-0.1.4/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-4.2.0+3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/usage-3.4.1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/uuid-2.0.4/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/validators-1.0.0+1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.0.8/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/video_thumbnail-0.1.7/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/vm_service-2.3.1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/wakelock-0.1.3+4/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/watcher-0.9.7+13/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/web_socket_channel-1.1.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/webkit_inspection_protocol-0.7.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/xdg_directories-0.1.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/xml-3.6.1/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/yaml-2.2.0/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/bin/cache/pkg/sky_engine/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/packages/flutter/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/packages/flutter_localizations/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/packages/flutter_test/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/packages/flutter_web_plugins/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
