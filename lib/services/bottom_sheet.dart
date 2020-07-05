@@ -10,7 +10,7 @@ import 'package:onef/pages/home/bottom_sheets/videos_autoplay_setting_picker.dar
 import 'package:onef/pages/home/pages/task/widgets/add_task.dart';
 import 'package:onef/services/user_preferences.dart';
 
-class BottomSheetService {
+class          BottomSheetService {
   bool hasActiveBottomSheet = false;
 
   Future<void> showAddTask({@required BuildContext context}) async {

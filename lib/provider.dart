@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:onef/pages/auth/create_account/blocs/create_account.dart';
-import 'package:onef/pages/home/pages/story/blocs/create_story.dart';
 import 'package:onef/plugins/proxy_settings.dart';
 import 'package:onef/services/auth_api.dart';
 import 'package:onef/services/bottom_sheet.dart';
@@ -19,8 +18,10 @@ import 'package:onef/services/localization.dart';
 import 'package:onef/services/media.dart';
 import 'package:onef/services/modal_service.dart';
 import 'package:onef/services/moods_api.dart';
+import 'package:onef/services/navigation_service.dart';
 import 'package:onef/services/notes_api.dart';
 import 'package:onef/services/notifications_api.dart';
+import 'package:onef/services/posts_api.dart';
 import 'package:onef/services/push_notifications.dart';
 import 'package:onef/services/share.dart';
 import 'package:onef/services/storage.dart';
@@ -57,7 +58,7 @@ class OneFProviderState extends State<OneFProvider> {
   UserPreferencesService userPreferencesService = UserPreferencesService();
   CreateAccountBloc createAccountBloc = CreateAccountBloc();
 
-  CreateStoryBloc createStoryBloc = CreateStoryBloc();
+  //CreateStoryBloc createStoryBloc = CreateStoryBloc();
 
   ValidationService validationService = ValidationService();
   HttpieService httpService = HttpieService();
@@ -83,10 +84,12 @@ class OneFProviderState extends State<OneFProvider> {
   DialogService dialogService = DialogService();
   DatePickerService datePickerService = DatePickerService();
   HashtagsApiService hashtagsApiService = HashtagsApiService();
-  TextAutocompletionService textAccountAutocompletionService =
-      TextAutocompletionService();
-  NotesApiService notesApiService = NotesApiService();
+  TextAutocompletionService textAccountAutocompletionService = TextAutocompletionService();
 
+  NavigationService navigationService = NavigationService();
+  PostsApiService postsApiService = PostsApiService();
+
+  NotesApiService notesApiService = NotesApiService();
   CategoriesApiService categoriesApiService = CategoriesApiService();
   MoodsApiService moodsApiService = MoodsApiService();
   ColorRangesApiService colorRangesApiService = ColorRangesApiService();
@@ -110,7 +113,7 @@ class OneFProviderState extends State<OneFProvider> {
     createAccountBloc.setAuthApiService(authApiService);
     createAccountBloc.setUserService(userService);
 
-    createStoryBloc.setUserService(userService);
+    //createStoryBloc.setUserService(userService);
 
     userService.setAuthApiService(authApiService);
     userService.setPushNotificationsService(pushNotificationsService);
@@ -161,8 +164,13 @@ class OneFProviderState extends State<OneFProvider> {
     moodsApiService.setHttpieService(httpService);
     colorRangesApiService.setHttpieService(httpService);
 
-    userService.setCreateStoryBlocService(createStoryBloc);
+    //userService.setCreateStoryBlocService(createStoryBloc);
     storiesApiService.setHttpieService(httpService);
+
+    userService.setPostsApiService(postsApiService);
+
+    postsApiService.setHttpieService(httpService);
+    postsApiService.setStringTemplateService(stringTemplateService);
 
   }
 
@@ -186,6 +194,8 @@ class OneFProviderState extends State<OneFProvider> {
     colorRangesApiService.setApiURL(environment.apiUrl);
 
     storiesApiService.setApiURL(environment.apiUrl);
+
+    postsApiService.setApiURL(environment.apiUrl);
 
     intercomService.bootstrap(
         iosApiKey: environment.intercomIosKey,
@@ -215,7 +225,7 @@ class OneFProviderState extends State<OneFProvider> {
   setLocalizationService(LocalizationService newLocalizationService) {
     localizationService = newLocalizationService;
     createAccountBloc.setLocalizationService(localizationService);
-    createStoryBloc.setLocalizationService(localizationService);
+    //createStoryBloc.setLocalizationService(localizationService);
     httpService.setLocalizationService(localizationService);
     userService.setLocalizationsService(localizationService);
     modalService.setLocalizationService(localizationService);

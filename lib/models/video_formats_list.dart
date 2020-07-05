@@ -1,18 +1,18 @@
 import 'package:onef/models/video_format.dart';
 
-class OBVideoFormatsList {
-  final List<OBVideoFormat> videoFormats;
+class OFVideoFormatsList {
+  final List<OFVideoFormat> videoFormats;
 
-  OBVideoFormatsList({
+  OFVideoFormatsList({
     this.videoFormats,
   });
 
-  factory OBVideoFormatsList.fromJson(List<dynamic> parsedJson) {
-    List<OBVideoFormat> videoFormats = parsedJson
-        .map((videoFormatJson) => OBVideoFormat.fromJSON(videoFormatJson))
+  factory OFVideoFormatsList.fromJson(List<dynamic> parsedJson) {
+    List<OFVideoFormat> videoFormats = parsedJson
+        .map((videoFormatJson) => OFVideoFormat.fromJSON(videoFormatJson))
         .toList();
 
-    return new OBVideoFormatsList(
+    return new OFVideoFormatsList(
       videoFormats: videoFormats,
     );
   }

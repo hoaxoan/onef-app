@@ -1,19 +1,19 @@
-class OBVideoFormat {
+class OFVideoFormat {
   final int id;
   final double progress;
   final double duration;
   final String format;
   final String file;
 
-  OBVideoFormatType type;
+  OFVideoFormatType type;
 
-  OBVideoFormat(
+  OFVideoFormat(
       {this.id, this.progress, this.duration, this.format, this.file}) {
-    type = OBVideoFormatType.parse(format);
+    type = OFVideoFormatType.parse(format);
   }
 
-  factory OBVideoFormat.fromJSON(Map<String, dynamic> json) {
-    return OBVideoFormat(
+  factory OFVideoFormat.fromJSON(Map<String, dynamic> json) {
+    return OFVideoFormat(
       id: json['int'],
       progress: json['progress']?.toDouble(),
       duration: json['duration']?.toDouble(),
@@ -33,27 +33,27 @@ class OBVideoFormat {
   }
 }
 
-class OBVideoFormatType {
+class OFVideoFormatType {
   final String code;
 
-  const OBVideoFormatType._internal(this.code);
+  const OFVideoFormatType._internal(this.code);
 
   toString() => code;
 
-  static const mp4SD = const OBVideoFormatType._internal('mp4_sd');
-  static const webmSD = const OBVideoFormatType._internal('webm_sd');
+  static const mp4SD = const OFVideoFormatType._internal('mp4_sd');
+  static const webmSD = const OFVideoFormatType._internal('webm_sd');
 
-  static const _values = const <OBVideoFormatType>[
+  static const _values = const <OFVideoFormatType>[
     mp4SD,
     webmSD,
   ];
 
   static values() => _values;
 
-  static OBVideoFormatType parse(String string) {
+  static OFVideoFormatType parse(String string) {
     if (string == null) return null;
 
-    OBVideoFormatType videoFormatType;
+    OFVideoFormatType videoFormatType;
     for (var type in _values) {
       if (string == type.code) {
         videoFormatType = type;

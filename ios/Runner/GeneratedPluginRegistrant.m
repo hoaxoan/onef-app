@@ -142,6 +142,12 @@
 @import url_launcher;
 #endif
 
+#if __has_include(<video_player/VideoPlayerPlugin.h>)
+#import <video_player/VideoPlayerPlugin.h>
+#else
+@import video_player;
+#endif
+
 #if __has_include(<video_thumbnail/VideoThumbnailPlugin.h>)
 #import <video_thumbnail/VideoThumbnailPlugin.h>
 #else
@@ -180,6 +186,7 @@
   [SqflitePlugin registerWithRegistrar:[registry registrarForPlugin:@"SqflitePlugin"]];
   [UniLinksPlugin registerWithRegistrar:[registry registrarForPlugin:@"UniLinksPlugin"]];
   [FLTUrlLauncherPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTUrlLauncherPlugin"]];
+  [FLTVideoPlayerPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTVideoPlayerPlugin"]];
   [VideoThumbnailPlugin registerWithRegistrar:[registry registrarForPlugin:@"VideoThumbnailPlugin"]];
   [WakelockPlugin registerWithRegistrar:[registry registrarForPlugin:@"WakelockPlugin"]];
 }

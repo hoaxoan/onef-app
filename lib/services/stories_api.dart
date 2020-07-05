@@ -1,6 +1,6 @@
-import 'package:onef/models/category.dart';
+import 'package:onef/models/story_category.dart';
 import 'package:onef/models/mood.dart';
-import 'package:onef/models/story.dart';
+import 'package:onef/models/post.dart';
 import 'package:onef/models/user.dart';
 import 'package:onef/services/httpie.dart';
 import 'package:onef/services/string_template.dart';
@@ -47,9 +47,9 @@ class StoriesApiService {
         appendAuthorizationToken: authenticatedRequest);
   }
 
-  Future<HttpieResponse> createStory({String title, Category category, Mood mood, User owner}) {
-    var story = new Story(title: title, category: category, mood: mood, owner:  owner);
-    return _httpService.postJSON(_makeApiUrl(CREATE_STORY_PATH), body: story.toJson(), appendAuthorizationToken: true);
+  Future<HttpieResponse> createStory({String title, StoryCategory storyCategory, Mood mood, User owner}) {
+    /*var story = new Post(title: title, category: category, mood: mood, owner:  owner);*/
+    return _httpService.postJSON(_makeApiUrl(CREATE_STORY_PATH), body: null, appendAuthorizationToken: true);
   }
 
 }

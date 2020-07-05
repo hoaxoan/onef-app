@@ -9,7 +9,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_advanced_networkimage/provider.dart';
 import 'package:meta/meta.dart';
 import 'package:onef/models/categories_list.dart';
-import 'package:onef/models/category.dart';
+import 'package:onef/models/story_categories_list.dart';
+import 'package:onef/models/story_category.dart';
 import 'package:onef/models/color_range.dart';
 import 'package:onef/models/device.dart';
 import 'package:onef/models/devices_list.dart';
@@ -22,8 +23,6 @@ import 'package:onef/models/note.dart';
 import 'package:onef/models/notes_list.dart';
 import 'package:onef/models/notifications/notification.dart';
 import 'package:onef/models/notifications/notifications_list.dart';
-import 'package:onef/models/stories_list.dart';
-import 'package:onef/models/story.dart';
 import 'package:onef/models/task.dart';
 import 'package:onef/models/task_home.dart';
 import 'package:onef/models/task_home_list.dart';
@@ -34,7 +33,6 @@ import 'package:onef/models/user.dart';
 import 'package:onef/models/user_notifications_settings.dart';
 import 'package:onef/models/users_list.dart';
 import 'package:onef/pages/auth/create_account/blocs/create_account.dart';
-import 'package:onef/pages/home/pages/story/blocs/create_story.dart';
 import 'package:onef/services/auth_api.dart';
 import 'package:onef/services/categories_api.dart';
 import 'package:onef/services/color_ranges_api.dart';
@@ -46,6 +44,7 @@ import 'package:onef/services/localization.dart';
 import 'package:onef/services/moods_api.dart';
 import 'package:onef/services/notes_api.dart';
 import 'package:onef/services/notifications_api.dart';
+import 'package:onef/services/posts_api.dart';
 import 'package:onef/services/push_notifications.dart';
 import 'package:onef/services/storage.dart';
 import 'package:onef/services/stories_api.dart';
@@ -68,6 +67,7 @@ class UserService {
 
   AuthApiService _authApiService;
   HttpieService _httpieService;
+  PostsApiService _postsApiService;
   ConnectionsApiService _connectionsApiService;
   NotificationsApiService _notificationsApiService;
   CreateAccountBloc _createAccountBlocService;
@@ -82,7 +82,7 @@ class UserService {
   MoodsApiService _moodsApiService;
   ColorRangesApiService _colorRangesApiService;
 
-  CreateStoryBloc _createStoryBlocService;
+  //CreateStoryBloc _createStoryBlocService;
   StoriesApiService _storiesApiService;
 
   // If this is null, means user logged out.
@@ -156,12 +156,16 @@ class UserService {
     _colorRangesApiService = colorRangesApiService;
   }
 
-  void setCreateStoryBlocService(CreateStoryBloc createStoryBloc) {
+  /*void setCreateStoryBlocService(CreateStoryBloc createStoryBloc) {
     _createStoryBlocService = createStoryBloc;
-  }
+  }*/
 
   void setStoriesApiServiceService(StoriesApiService storiesApiService) {
     _storiesApiService = storiesApiService;
+  }
+
+  void setPostsApiService(PostsApiService postsApiService) {
+    _postsApiService = postsApiService;
   }
 
   Future<void> deleteAccountWithPassword(String password) async {
@@ -1031,7 +1035,7 @@ class UserService {
     return _userStorage.get(STORAGE_FIRST_STORIES_DATA);
   }
 
-  StoriesList _makeStoriesList(String storiesData) {
+  /*StoriesList _makeStoriesList(String storiesData) {
     return StoriesList.fromJson(json.decode(storiesData));
   }
 
@@ -1072,7 +1076,7 @@ class UserService {
     _checkResponseIsOk(response);
 
     return Story.fromJson(json.decode(response.body));
-  }
+  }*/
 
   // Commons
   Future<CategoriesList> getCategories() async {

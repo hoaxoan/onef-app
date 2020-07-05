@@ -1,24 +1,29 @@
 import 'package:dcache/dcache.dart';
 import 'package:onef/models/updatable_model.dart';
+import 'package:onef/models/user.dart';
 
 class Category extends UpdatableModel<Category> {
   final int id;
+  final User creator;
   String name;
+  String title;
+  String description;
+  String avatar;
   String color;
-  String code;
-  int order;
 
   Category({
     this.id,
-    this.name,
+    this.creator,
+    this.avatar,
     this.color,
-    this.code,
-    this.order
+    this.title,
+    this.description,
+    this.name,
   });
 
   static final factory = CategoryFactory();
 
-  factory Category.fromJson(Map<String, dynamic> json) {
+  factory Category.fromJSON(Map<String, dynamic> json) {
     if (json == null) return null;
     return factory.fromJson(json);
   }
@@ -26,10 +31,12 @@ class Category extends UpdatableModel<Category> {
   Map<String, dynamic> toJson() {
     return {
       'id': id,
-      'name': name,
+      'creator': creator?.toJson(),
+      'avatar': avatar,
       'color': color,
-      'code': code,
-      'order': order
+      'title': title,
+      'description': description,
+      'name': name
     };
   }
 
@@ -43,12 +50,16 @@ class Category extends UpdatableModel<Category> {
       color = json['color'];
     }
 
-    if (json.containsKey('code')) {
-      code = json['code'];
+    if (json.containsKey('title')) {
+      title = json['title'];
     }
 
-    if (json.containsKey('order')) {
-      order = json['order'];
+    if (json.containsKey('description')) {
+      description = json['description'];
+    }
+
+    if (json.containsKey('avatar')) {
+      avatar = json['avatar'];
     }
   }
 }
@@ -63,9 +74,16 @@ class CategoryFactory extends UpdatableModelFactory<Category> {
     return Category(
       id: json['id'],
       name: json['name'],
+      title: json['title'],
+      description: json['description'],
+      avatar: json['avatar'],
       color: json['color'],
-      code: json['code'],
-      order: json['order'],
+      creator: parseUser(json['creator']),
     );
+  }
+
+  User parseUser(Map userData) {
+    if (userData == null) return null;
+    return User.fromJson(userData);
   }
 }

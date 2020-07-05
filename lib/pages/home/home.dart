@@ -10,7 +10,6 @@ import 'package:onef/pages/home/lib/poppable_page_controller.dart';
 import 'package:onef/pages/home/pages/main.dart';
 import 'package:onef/pages/home/pages/note/note_page.dart';
 import 'package:onef/pages/home/pages/search/search.dart';
-import 'package:onef/pages/home/pages/story/story_page.dart';
 import 'package:onef/pages/home/pages/task/task_home_page.dart';
 import 'package:onef/pages/home/pages/task/task_list_page.dart';
 import 'package:onef/pages/home/pages/widgets/bottom-tab-bar.dart';
@@ -56,7 +55,7 @@ class OFHomePageState extends State<OFHomePage> with WidgetsBindingObserver {
   StreamSubscription _pushNotificationSubscription;
 
   OFMainPageController _mainPageController;
-  OFStoryPageController _storyPageController;
+  //OFStoryPageController _storyPageController;
   OFTaskHomePageController _taskHomePageController;
   OFTaskListPageController _taskListPageController;
   OFNotePageController _notePageController;
@@ -75,7 +74,7 @@ class OFHomePageState extends State<OFHomePage> with WidgetsBindingObserver {
     _needsBootstrap = true;
     _loggedInUserUnreadNotifications = 0;
     _mainPageController = OFMainPageController();
-    _storyPageController = OFStoryPageController();
+    //_storyPageController = OFStoryPageController();
     _taskHomePageController = OFTaskHomePageController();
     _taskListPageController = OFTaskListPageController();
     _notePageController = OFNotePageController();
@@ -151,11 +150,11 @@ class OFHomePageState extends State<OFHomePage> with WidgetsBindingObserver {
   Widget _getPageForTabIndex(int index) {
     Widget page;
     switch (OFHomePageTabs.values[index]) {
-      case OFHomePageTabs.main:
+     /* case OFHomePageTabs.main:
         page = OFStoryPage(
           controller: _storyPageController,
         );
-        break;
+        break;*/
       case OFHomePageTabs.task:
         page = OFTaskListPage(
           controller: _taskListPageController,
@@ -200,10 +199,10 @@ class OFHomePageState extends State<OFHomePage> with WidgetsBindingObserver {
           }
         }*/
 
-        if (tappedTab == OFHomePageTabs.main &&
+        /*if (tappedTab == OFHomePageTabs.main &&
             currentTab == OFHomePageTabs.main) {
           _storyPageController.popUntilFirstRoute();
-        }
+        }*/
 
         /* if (tappedTab == OFHomePageTabs.task &&
             currentTab == OFHomePageTabs.task) {
@@ -340,9 +339,9 @@ class OFHomePageState extends State<OFHomePage> with WidgetsBindingObserver {
     PoppablePageController currentTabController;
 
     switch (currentTab) {
-      case OFHomePageTabs.main:
+    /*  case OFHomePageTabs.main:
         currentTabController = _storyPageController;
-        break;
+        break;*/
       case OFHomePageTabs.task:
         currentTabController = _taskHomePageController;
         break;

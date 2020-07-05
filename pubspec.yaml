@@ -59,6 +59,7 @@ dependencies:
   package_info: ^0.4.0+13
   flutter_staggered_grid_view: ^0.3.0
   flutter_sticky_header: ^0.4.2
+  open_iconic_flutter: ^0.3.0
 
   firebase_core: ^0.4.5
   cloud_firestore: ^0.13.7
@@ -70,6 +71,12 @@ dependencies:
     git:
       url: https://github.com/OkunaOrg/inview_notifier_list.git
       ref: c74749a052f91fbdd11fad959c2c59d0d10c7695
+
+  video_player:
+    git:
+      url: https://github.com/OkunaOrg/plugins.git
+      ref: ricardo/develop2
+      path: packages/video_player
 
   flutter:
     sdk: flutter

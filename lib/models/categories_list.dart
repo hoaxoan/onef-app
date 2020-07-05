@@ -1,3 +1,4 @@
+
 import 'package:onef/models/category.dart';
 
 class CategoriesList {
@@ -9,7 +10,7 @@ class CategoriesList {
 
   factory CategoriesList.fromJson(List<dynamic> parsedJson) {
     List<Category> categories = parsedJson
-        .map((categoryJson) => Category.fromJson(categoryJson))
+        .map((categoryJson) => Category.fromJSON(categoryJson))
         .toList();
 
     return new CategoriesList(

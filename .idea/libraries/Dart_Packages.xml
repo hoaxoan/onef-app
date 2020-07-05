@@ -548,6 +548,13 @@
             </list>
           </value>
         </entry>
+        <entry key="open_iconic_flutter">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/open_iconic_flutter-0.3.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="package_config">
           <value>
             <list>
@@ -975,6 +982,13 @@
             </list>
           </value>
         </entry>
+        <entry key="video_player">
+          <value>
+            <list>
+              <option value="D:/Flutter/Sdk/flutter/.pub-cache/git/plugins-7c584243c4960ba9aa0bd4f144545191c0ccf87e/packages/video_player/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="video_thumbnail">
           <value>
             <list>
@@ -1042,6 +1056,7 @@
     </properties>
     <CLASSES>
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/git/inview_notifier_list-c74749a052f91fbdd11fad959c2c59d0d10c7695/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/git/plugins-7c584243c4960ba9aa0bd4f144545191c0ccf87e/packages/video_player/lib" />
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/_fe_analyzer_shared-1.0.3/lib" />
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/after_layout-1.0.7+2/lib" />
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/analyzer-0.39.4/lib" />
@@ -1115,6 +1130,7 @@
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/node_io-1.0.1+2/lib" />
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/node_preamble-1.4.8/lib" />
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/onesignal_flutter-2.3.3/lib" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/open_iconic_flutter-0.3.0/lib" />
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/package_config-1.9.3/lib" />
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/package_info-0.4.0+13/lib" />
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/package_resolver-1.0.10/lib" />
