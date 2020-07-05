@@ -9,12 +9,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_advanced_networkimage/provider.dart';
 import 'package:meta/meta.dart';
 import 'package:onef/models/categories_list.dart';
+import 'package:onef/models/circle.dart';
+import 'package:onef/models/community.dart';
 import 'package:onef/models/emoji.dart';
 import 'package:onef/models/emoji_group_list.dart';
+import 'package:onef/models/follows_list.dart';
 import 'package:onef/models/post.dart';
 import 'package:onef/models/post_comment.dart';
 import 'package:onef/models/post_media_list.dart';
 import 'package:onef/models/post_reaction.dart';
+import 'package:onef/models/posts_list.dart';
 import 'package:onef/models/story_categories_list.dart';
 import 'package:onef/models/story_category.dart';
 import 'package:onef/models/color_range.dart';
@@ -65,6 +69,7 @@ class UserService {
 
   static const STORAGE_KEY_AUTH_TOKEN = 'authToken';
   static const STORAGE_KEY_USER_DATA = 'data';
+  static const STORAGE_FIRST_POSTS_DATA = 'firstPostsData';
   static const STORAGE_FIRST_NOTES_DATA = 'firstNotesData';
   static const STORAGE_TOP_POSTS_DATA = 'topPostsData';
   static const STORAGE_TOP_POSTS_LAST_VIEWED_ID = 'topPostsLastViewedId';
@@ -1098,6 +1103,118 @@ class UserService {
   }
 
   // Posts
+  PostsList _makePostsList(String postsData) {
+    return PostsList.fromJson(json.decode(postsData));
+  }
+
+  Future<void> _storeFirstPostsData(String firstPostsData) {
+    return _userStorage.set(STORAGE_FIRST_POSTS_DATA, firstPostsData);
+  }
+
+  Future<PostsList> getStoredFirstPosts() async {
+    String firstPostsData = await this._getStoredFirstPostsData();
+    if (firstPostsData != null) {
+      var postsList = _makePostsList(firstPostsData);
+      return postsList;
+    }
+    return PostsList();
+  }
+
+  Future<PostsList> getTimelinePosts(
+      {List<Circle> circles = const [],
+        List<FollowsList> followsLists = const [],
+        int maxId,
+        int count,
+        String username,
+        bool cachePosts = false}) async {
+    HttpieResponse response = await _postsApiService.getTimelinePosts(
+        circleIds: circles.map((circle) => circle.id).toList(),
+        listIds: followsLists.map((followsList) => followsList.id).toList(),
+        maxId: maxId,
+        count: count,
+        username: username,
+        authenticatedRequest: true);
+    _checkResponseIsOk(response);
+    String postsData = response.body;
+    if (cachePosts) {
+      this._storeFirstPostsData(postsData);
+    }
+    return _makePostsList(postsData);
+  }
+
+  Future<Post> createPost(
+      {String text, List<Circle> circles = const [], bool isDraft}) async {
+    HttpieStreamedResponse response = await _postsApiService.createPost(
+        text: text,
+        circleIds: circles.map((circle) => circle.id).toList(),
+        isDraft: isDraft);
+
+    _checkResponseIsCreated(response);
+
+    // Post counts may have changed
+    refreshUser();
+
+    String responseBody = await response.readAsString();
+    return Post.fromJson(json.decode(responseBody));
+  }
+
+  Future<Post> editPost({String postUuid, String text}) async {
+    HttpieStreamedResponse response =
+    await _postsApiService.editPost(postUuid: postUuid, text: text);
+
+    _checkResponseIsOk(response);
+
+    String responseBody = await response.readAsString();
+    return Post.fromJson(json.decode(responseBody));
+  }
+
+  Future<void> deletePost(Post post) async {
+    HttpieResponse response =
+    await _postsApiService.deletePostWithUuid(post.uuid);
+    _checkResponseIsOk(response);
+  }
+
+  Future<void> publishPost({@required Post post}) async {
+    HttpieResponse response =
+    await _postsApiService.publishPost(postUuid: post.uuid);
+
+    _checkResponseIsOk(response);
+  }
+
+  Future<Post> createPostForCommunity(Community community,
+      {String text, File image, File video, bool isDraft}) async {
+   /* HttpieStreamedResponse response = await _communitiesApiService
+        .createPostForCommunityWithId(community.name,
+        text: text, image: image, video: video, isDraft: isDraft);
+    _checkResponseIsCreated(response);
+
+    String responseBody = await response.readAsString();
+
+    return Post.fromJson(json.decode(responseBody));*/
+   return null;
+  }
+
+  Future<Post> getPostWithUuid(String uuid) async {
+    HttpieResponse response = await _postsApiService.getPostWithUuid(uuid);
+    _checkResponseIsOk(response);
+    return Post.fromJson(json.decode(response.body));
+  }
+
+  Future<OBPostStatus> getPostStatus({@required Post post}) async {
+    HttpieResponse response =
+    await _postsApiService.getPostWithUuidStatus(post.uuid);
+
+    _checkResponseIsOk(response);
+
+    Map<String, dynamic> responseJson = response.parseJsonBody();
+
+    OBPostStatus status = OBPostStatus.parse(responseJson['status']);
+
+    post.setStatus(status);
+
+    return status;
+  }
+
   Future<PostReaction> reactToPost(
       {@required Post post, @required Emoji emoji}) async {
     HttpieResponse response = await _postsApiService.reactToPost(
