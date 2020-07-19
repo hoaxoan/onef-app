@@ -10,6 +10,7 @@ import io.flutter.plugins.firebase.core.FirebaseCorePlugin;
 import io.flutter.plugins.firebase.storage.FirebaseStoragePlugin;
 import com.arthenica.flutter.ffmpeg.FlutterFFmpegPlugin;
 import com.example.flutterimagecompress.FlutterImageCompressPlugin;
+import io.flutter.plugins.flutter_plugin_android_lifecycle.FlutterAndroidLifecyclePlugin;
 import com.it_nomads.fluttersecurestorage.FlutterSecureStoragePlugin;
 import io.flutter.plugins.googlesignin.GoogleSignInPlugin;
 import vn.hunghd.flutter.plugins.imagecropper.ImageCropperPlugin;
@@ -45,6 +46,7 @@ public final class GeneratedPluginRegistrant {
     FirebaseStoragePlugin.registerWith(registry.registrarFor("io.flutter.plugins.firebase.storage.FirebaseStoragePlugin"));
     FlutterFFmpegPlugin.registerWith(registry.registrarFor("com.arthenica.flutter.ffmpeg.FlutterFFmpegPlugin"));
     FlutterImageCompressPlugin.registerWith(registry.registrarFor("com.example.flutterimagecompress.FlutterImageCompressPlugin"));
+    FlutterAndroidLifecyclePlugin.registerWith(registry.registrarFor("io.flutter.plugins.flutter_plugin_android_lifecycle.FlutterAndroidLifecyclePlugin"));
     FlutterSecureStoragePlugin.registerWith(registry.registrarFor("com.it_nomads.fluttersecurestorage.FlutterSecureStoragePlugin"));
     GoogleSignInPlugin.registerWith(registry.registrarFor("io.flutter.plugins.googlesignin.GoogleSignInPlugin"));
     ImageCropperPlugin.registerWith(registry.registrarFor("vn.hunghd.flutter.plugins.imagecropper.ImageCropperPlugin"));

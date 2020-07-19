@@ -236,13 +236,13 @@ class OFTimelinePageState extends State<OFTimelinePage>
   }
 
   Future<bool> _onCreatePost({String text, File image, File video}) async {
-    /*OFNewPostData createPostData = await _modalService.openCreatePost(text: text, image: image, video: video, context: context);
+    OFNewPostData createPostData = await _modalService.openCreatePost(text: text, image: image, video: video, context: context);
     if (createPostData != null) {
       addNewPostData(createPostData);
       _timelinePostsStreamController.scrollToTop(skipRefresh: true);
 
       return true;
-    }*/
+    }
 
     return false;
   }

@@ -10,7 +10,8 @@ class PostsApiService {
 
   String apiURL;
 
-  static const GET_POSTS_PATH = 'api/posts/';
+  static const GET_POSTS_PATH = 'posts';
+
   static const GET_TOP_POSTS_PATH = 'api/posts/top/';
   static const EXCLUDED_TOP_POSTS_COMMUNITIES_PATH =
       'api/posts/top/excluded-communities/';

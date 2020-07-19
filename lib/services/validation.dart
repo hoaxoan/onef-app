@@ -1,8 +1,9 @@
 import 'dart:io';
 
 import 'package:onef/services/auth_api.dart';
+import 'package:onef/services/connections_circles_api.dart';
 import 'package:onef/services/httpie.dart';
-import 'package:onef/services/media.dart';
+import 'package:onef/services/media/media.dart';
 import 'package:onef/services/utils_service.dart';
 import 'package:validators/validators.dart' as validators;
 
@@ -12,6 +13,7 @@ class ValidationService {
   AuthApiService _authApiService;
   LocalizationService _localizationService;
   UtilsService _utilsService;
+  ConnectionsCirclesApiService _connectionsCirclesApiService;
 
   static const int USERNAME_MAX_LENGTH = 30;
   static const int COMMUNITY_NAME_MAX_LENGTH = 32;
@@ -50,6 +52,10 @@ class ValidationService {
 
   void setLocalizationService(LocalizationService localizationService) {
     _localizationService = localizationService;
+  }
+
+  void setConnectionsCirclesApiService(ConnectionsCirclesApiService connectionsCirclesApiService) {
+    _connectionsCirclesApiService = connectionsCirclesApiService;
   }
 
   bool isQualifiedEmail(String email) {

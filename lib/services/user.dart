@@ -10,6 +10,7 @@ import 'package:flutter_advanced_networkimage/provider.dart';
 import 'package:meta/meta.dart';
 import 'package:onef/models/categories_list.dart';
 import 'package:onef/models/circle.dart';
+import 'package:onef/models/circles_list.dart';
 import 'package:onef/models/community.dart';
 import 'package:onef/models/emoji.dart';
 import 'package:onef/models/emoji_group_list.dart';
@@ -47,7 +48,9 @@ import 'package:onef/services/auth_api.dart';
 import 'package:onef/services/categories_api.dart';
 import 'package:onef/services/color_ranges_api.dart';
 import 'package:onef/services/connections_api.dart';
+import 'package:onef/services/connections_circles_api.dart';
 import 'package:onef/services/devices_api.dart';
+import 'package:onef/services/draft.dart';
 import 'package:onef/services/hashtags_api.dart';
 import 'package:onef/services/httpie.dart';
 import 'package:onef/services/localization.dart';
@@ -87,6 +90,8 @@ class UserService {
   PushNotificationsService _pushNotificationService;
   IntercomService _intercomService;
   HashtagsApiService _hashtagsApiService;
+  ConnectionsCirclesApiService _connectionsCirclesApiService;
+
   NotesApiService _notesApiService;
 
   CategoriesApiService _categoriesApiService;
@@ -95,6 +100,8 @@ class UserService {
 
   //CreateStoryBloc _createStoryBlocService;
   StoriesApiService _storiesApiService;
+
+  DraftService _draftService;
 
   // If this is null, means user logged out.
   Stream<User> get loggedInUserChange => _loggedInUserChangeSubject.stream;
@@ -179,6 +186,16 @@ class UserService {
     _postsApiService = postsApiService;
   }
 
+
+  void setConnectionsCirclesApiService(ConnectionsCirclesApiService circlesApiService) {
+    _connectionsCirclesApiService = circlesApiService;
+  }
+
+  void setDraftService(DraftService draftService) {
+    _draftService = draftService;
+  }
+
+
   Future<void> deleteAccountWithPassword(String password) async {
     HttpieResponse response =
         await _authApiService.deleteUser(password: password);
@@ -196,6 +213,7 @@ class UserService {
       await _removeStoredUserData();
       await _removeStoredAuthToken();
       _httpieService.removeAuthorizationToken();
+      _draftService.clear();
       _removeLoggedInUser();
       await clearCache();
       User.clearSessionCache();
@@ -1286,6 +1304,13 @@ class UserService {
     _checkResponseIsOk(response);
 
     return EmojiGroupList.fromJson(json.decode(response.body));
+  }
+
+  // Circles
+  Future<CirclesList> getConnectionsCircles() async {
+    HttpieResponse response = await _connectionsCirclesApiService.getCircles();
+    _checkResponseIsOk(response);
+    return CirclesList.fromJson(json.decode(response.body));
   }
 
 }

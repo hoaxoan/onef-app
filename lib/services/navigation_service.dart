@@ -10,6 +10,10 @@ import 'package:onef/models/post.dart';
 import 'package:onef/models/post_comment.dart';
 import 'package:onef/models/reactions_emoji_count.dart';
 import 'package:onef/models/user.dart';
+import 'package:onef/pages/home/pages/modals/save_post/pages/share_post/pages/share_post_with_circles.dart';
+import 'package:onef/pages/home/pages/modals/save_post/pages/share_post/pages/share_post_with_community.dart';
+import 'package:onef/pages/home/pages/modals/save_post/pages/share_post/share_post.dart';
+import 'package:onef/widgets/new_post_data_uploader.dart';
 import 'package:onef/widgets/routes/slide_right_route.dart';
 
 class NavigationService {
@@ -17,30 +21,30 @@ class NavigationService {
 
   Future navigateToUserProfile(
       {@required User user, @required BuildContext context}) async {
-    /*return Navigator.push(
+    return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('userProfileRoute'),
           builder: (BuildContext context) {
-            return OFProfilePage(
+           /* return OFProfilePage(
               user,
-            );
+            );*/
           }),
-    );*/
+    );
   }
 
   Future navigateToCommunity(
       {@required Community community, @required BuildContext context}) async {
-   /* return Navigator.push(
+    return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('communityRoute'),
           builder: (BuildContext context) {
-            return OBCommunityPage(
+           /* return OFCommunityPage(
               community,
-            );
+            );*/
           }),
-    );*/
+    );
   }
 
   Future navigateToCommunityStaffPage(
@@ -494,52 +498,52 @@ class NavigationService {
     );*/
   }
 
-  /*Future<OBNewPostData> navigateToSharePost(
+ Future<OFNewPostData> navigateToSharePost(
       {@required BuildContext context,
-      @required OBNewPostData createPostData}) {
+      @required OFNewPostData createPostData}) {
     return Navigator.push(
       context,
-      OFSlideRightRoute<OBNewPostData>(
+      OFSlideRightRoute<OFNewPostData>(
           slidableKey: _getKeyRandomisedWithWord('sharePostPageRoute'),
           builder: (BuildContext context) {
-            return OBSharePostPage(
+            return OFSharePostPage(
               createPostData: createPostData,
             );
           }),
     );
   }
 
-  Future<OBNewPostData> navigateToSharePostWithCircles(
+  Future<OFNewPostData> navigateToSharePostWithCircles(
       {@required BuildContext context,
-      @required OBNewPostData createPostData}) {
+      @required OFNewPostData createPostData}) {
     return Navigator.push(
       context,
-      OFSlideRightRoute<OBNewPostData>(
+      OFSlideRightRoute<OFNewPostData>(
           slidableKey:
               _getKeyRandomisedWithWord('sharePostWithCirclesPageRoute'),
           builder: (BuildContext context) {
-            return OBSharePostWithCirclesPage(
+            return OFSharePostWithCirclesPage(
               createPostData: createPostData,
             );
           }),
     );
   }
 
-  Future<OBNewPostData> navigateToSharePostWithCommunity(
+  Future<OFNewPostData> navigateToSharePostWithCommunity(
       {@required BuildContext context,
-      @required OBNewPostData createPostData}) {
+      @required OFNewPostData createPostData}) {
     return Navigator.push(
       context,
-      OFSlideRightRoute<OBNewPostData>(
+      OFSlideRightRoute<OFNewPostData>(
           slidableKey:
               _getKeyRandomisedWithWord('sharePostWithCommunityPageRoute'),
           builder: (BuildContext context) {
-            return OBSharePostWithCommunityPage(
+            return OFSharePostWithCommunityPage(
               createPostData: createPostData,
             );
           }),
     );
-  }*/
+  }
 
   Future navigateToFollowsLists({@required BuildContext context}) {
    /* return Navigator.push(

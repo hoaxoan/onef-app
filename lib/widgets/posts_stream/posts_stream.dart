@@ -251,7 +251,7 @@ class OFPostsStreamState extends State<OFPostsStream>
     String postIdentifier,
     ValueChanged<Post> onPostDeleted,
   }) {
-    return OBPost(
+    return OFPost(
       post,
       key: Key(postIdentifier),
       onPostDeleted: onPostDeleted,

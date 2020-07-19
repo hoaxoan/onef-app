@@ -12,10 +12,12 @@ import 'package:onef/models/post_comment.dart';
 import 'package:onef/models/post_comment_reaction.dart';
 import 'package:onef/models/post_reaction.dart';
 import 'package:onef/models/user.dart';
+import 'package:onef/pages/home/bottom_sheets/camera_picker.dart';
 import 'package:onef/pages/home/bottom_sheets/confirm_action.dart';
 import 'package:onef/pages/home/bottom_sheets/image_picker.dart';
 import 'package:onef/pages/home/bottom_sheets/react_to_post.dart';
 import 'package:onef/pages/home/bottom_sheets/video_picker.dart';
+import 'package:onef/services/media/models/media_file.dart';
 import 'package:onef/services/user_preferences.dart';
 import 'package:onef/widgets/post/post.dart';
 
@@ -232,13 +234,13 @@ class BottomSheetService {
         });
   }
 
-/*  Future<MediaFile> showCameraPicker({@required BuildContext context}) {
+  Future<MediaFile> showCameraPicker({@required BuildContext context}) {
     return _showModalBottomSheetApp(
         context: context,
         builder: (BuildContext context) {
           return OFCameraPickerBottomSheet();
         });
-  }*/
+  }
 
   Future<File> showVideoPicker({@required BuildContext context}) {
     return _showModalBottomSheetApp(

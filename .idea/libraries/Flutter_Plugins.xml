@@ -4,7 +4,6 @@
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity-0.4.6+2" />
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.6.1+10" />
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-4.2.0+3" />
-      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/file_picker-1.4.3+2" />
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.6.11" />
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-0.0.4+3" />
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/wakelock-0.1.3+4" />
@@ -34,6 +33,8 @@
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2" />
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.1.1+2" />
       <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/git/plugins-7c584243c4960ba9aa0bd4f144545191c0ccf87e/packages/video_player" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/file_picker-1.12.0" />
+      <root url="file://D:/Flutter/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-1.0.8" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

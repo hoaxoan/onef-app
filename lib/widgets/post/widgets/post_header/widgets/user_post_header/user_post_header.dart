@@ -76,7 +76,7 @@ class OFUserPostHeader extends StatelessWidget {
           children: <Widget>[
             Flexible(
               child: OFText(
-                _post.creator.getProfileName(),
+                _post.creator != null ? _post.creator.getProfileName() : "",
                 style: TextStyle(fontWeight: FontWeight.bold),
                 overflow: TextOverflow.ellipsis,
               ),

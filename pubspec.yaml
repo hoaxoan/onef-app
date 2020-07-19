@@ -20,7 +20,7 @@ dependencies:
   retry: ^3.0.0+1
   shared_preferences: ^0.5.7+3
   flutter_markdown: ^0.2.0
-  file_picker: ^1.4.2
+  file_picker: ^1.9.0
   sentry: ^2.2.0
   screen: ^0.0.5
   back_button_interceptor: ^4.0.1
@@ -122,5 +122,9 @@ flutter:
     - assets/
     - assets/images/splash-background.png
     - assets/images/openbook-o-logo.png
+    - assets/images/stickers/female-instructor.png
+    - assets/images/stickers/got-it.png
+    - assets/images/stickers/owl-instructor.png
+    - assets/images/stickers/perplexed-owl.png
     - .env.json
 # PUBSPEC CHECKSUM: ba0e

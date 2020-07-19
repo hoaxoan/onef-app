@@ -8,8 +8,8 @@ class DevicesApiService {
 
   String apiURL;
 
-  static const DEVICES_PATH = 'api/devices/';
-  static const DEVICE_PATH = 'api/devices/{deviceUuid}/';
+  static const DEVICES_PATH = 'devices';
+  static const DEVICE_PATH = 'devices/{deviceUuid}';
 
   void setHttpService(HttpieService httpService) {
     _httpService = httpService;
@@ -39,7 +39,7 @@ class DevicesApiService {
 
     if (name != null) body['name'] = name;
 
-    return _httpService.putJSON(url,
+    return _httpService.postJSON(url,
         appendAuthorizationToken: true, body: body);
   }
 

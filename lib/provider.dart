@@ -6,22 +6,25 @@ import 'package:onef/services/bottom_sheet.dart';
 import 'package:onef/services/categories_api.dart';
 import 'package:onef/services/color_ranges_api.dart';
 import 'package:onef/services/connections_api.dart';
+import 'package:onef/services/connections_circles_api.dart';
 import 'package:onef/services/connectivity.dart';
 import 'package:onef/services/date_picker.dart';
 import 'package:onef/services/devices_api.dart';
 import 'package:onef/services/dialog.dart';
+import 'package:onef/services/draft.dart';
 import 'package:onef/services/environment_loader.dart';
 import 'package:onef/services/hashtags_api.dart';
 import 'package:onef/services/httpie.dart';
 import 'package:onef/services/intercom.dart';
 import 'package:onef/services/link_preview.dart';
 import 'package:onef/services/localization.dart';
-import 'package:onef/services/media.dart';
+import 'package:onef/services/media/media.dart';
 import 'package:onef/services/modal_service.dart';
 import 'package:onef/services/moods_api.dart';
 import 'package:onef/services/navigation_service.dart';
 import 'package:onef/services/notes_api.dart';
 import 'package:onef/services/notifications_api.dart';
+import 'package:onef/services/permissions.dart';
 import 'package:onef/services/posts_api.dart';
 import 'package:onef/services/push_notifications.dart';
 import 'package:onef/services/share.dart';
@@ -87,6 +90,8 @@ class OneFProviderState extends State<OneFProvider> {
   HashtagsApiService hashtagsApiService = HashtagsApiService();
   TextAutocompletionService textAccountAutocompletionService = TextAutocompletionService();
   LinkPreviewService linkPreviewService = LinkPreviewService();
+  PermissionsService permissionService = PermissionsService();
+  ConnectionsCirclesApiService connectionsCirclesApiService = ConnectionsCirclesApiService();
 
   NavigationService navigationService = NavigationService();
   PostsApiService postsApiService = PostsApiService();
@@ -98,6 +103,7 @@ class OneFProviderState extends State<OneFProvider> {
 
   StoriesApiService storiesApiService = StoriesApiService();
 
+  DraftService draftService = DraftService();
   LocalizationService localizationService;
   SentryClient sentryClient;
 
@@ -110,10 +116,13 @@ class OneFProviderState extends State<OneFProvider> {
     userPreferencesService.setConnectivityService(connectivityService);
     httpService.setUtilsService(utilsService);
     connectionsApiService.setHttpService(httpService);
+    connectionsCirclesApiService.setHttpService(httpService);
     authApiService.setHttpService(httpService);
     authApiService.setStringTemplateService(stringTemplateService);
+    connectionsCirclesApiService.setStringTemplateService(stringTemplateService);
     createAccountBloc.setAuthApiService(authApiService);
     createAccountBloc.setUserService(userService);
+
 
     //createStoryBloc.setUserService(userService);
 
@@ -123,6 +132,7 @@ class OneFProviderState extends State<OneFProvider> {
     userService.setHttpieService(httpService);
     userService.setStorageService(storageService);
     userService.setConnectionsApiService(connectionsApiService);
+    userService.setConnectionsCirclesApiService(connectionsCirclesApiService);
     userService.setNotificationsApiService(notificationsApiService);
     userService.setDevicesApiService(devicesApiService);
     userService.setCreateAccountBlocService(createAccountBloc);
@@ -136,6 +146,7 @@ class OneFProviderState extends State<OneFProvider> {
     userService.setColorRangesApiService(colorRangesApiService);
 
     userService.setStoriesApiServiceService(storiesApiService);
+    userService.setDraftService(draftService);
 
     notificationsApiService.setHttpService(httpService);
     notificationsApiService.setStringTemplateService(stringTemplateService);
@@ -143,10 +154,13 @@ class OneFProviderState extends State<OneFProvider> {
     devicesApiService.setStringTemplateService(stringTemplateService);
     validationService.setAuthApiService(authApiService);
     validationService.setUtilsService(utilsService);
+    validationService.setConnectionsCirclesApiService(connectionsCirclesApiService);
+
     themeService.setStorageService(storageService);
     themeService.setUtilsService(utilsService);
     mediaService.setValidationService(validationService);
     mediaService.setBottomSheetService(bottomSheetService);
+    mediaService.setPermissionsService(permissionService);
     mediaService.setUtilsService(utilsService);
     pushNotificationsService.setUserService(userService);
     pushNotificationsService.setStorageService(storageService);
@@ -161,6 +175,7 @@ class OneFProviderState extends State<OneFProvider> {
     linkPreviewService.setHttpieService(httpService);
     linkPreviewService.setUtilsService(utilsService);
     linkPreviewService.setValidationService(validationService);
+    permissionService.setToastService(toastService);
 
     notesApiService.setHttpieService(httpService);
     notesApiService.setStringTemplateService(stringTemplateService);
@@ -188,6 +203,7 @@ class OneFProviderState extends State<OneFProvider> {
         .setProxy(await ProxySettings.findProxy(Uri.parse(environment.apiUrl)));
     authApiService.setApiURL(environment.apiUrl);
     connectionsApiService.setApiURL(environment.apiUrl);
+    connectionsCirclesApiService.setApiURL(environment.apiUrl);
     notificationsApiService.setApiURL(environment.apiUrl);
     devicesApiService.setApiURL(environment.apiUrl);
     hashtagsApiService.setApiURL(environment.apiUrl);
@@ -237,6 +253,7 @@ class OneFProviderState extends State<OneFProvider> {
     userPreferencesService.setLocalizationService(localizationService);
     shareService.setLocalizationService(localizationService);
     mediaService.setLocalizationService(localizationService);
+    permissionService.setLocalizationService(localizationService);
   }
 
   setValidationService(ValidationService newValidationService) {

@@ -1796,6 +1796,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "task__scheduled": MessageLookupByLibrary.simpleMessage("Scheduled"),
         "task__flagged": MessageLookupByLibrary.simpleMessage("Flagged"),
         "task__all": MessageLookupByLibrary.simpleMessage("All"),
-        "task__new_list": MessageLookupByLibrary.simpleMessage("New List")
+        "task__new_list": MessageLookupByLibrary.simpleMessage("New List"),
+        "post__create_media" : MessageLookupByLibrary.simpleMessage("Media"),
+        "post__create_camera" : MessageLookupByLibrary.simpleMessage("Camera"),
+        "error__receive_share_text_too_long" : m67,
+        "user_search__selection_clear_all" : MessageLookupByLibrary.simpleMessage("Clear all"),
+        "user_search__selection_submit" : MessageLookupByLibrary.simpleMessage("Submit"),
       };
 }

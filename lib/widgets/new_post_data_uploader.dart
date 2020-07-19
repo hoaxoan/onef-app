@@ -11,7 +11,7 @@ import 'package:onef/models/post.dart';
 import 'package:onef/provider.dart';
 import 'package:onef/services/httpie.dart';
 import 'package:onef/services/localization.dart';
-import 'package:onef/services/media.dart';
+import 'package:onef/services/media/media.dart';
 import 'package:onef/services/user.dart';
 import 'package:onef/widgets/theming/highlighted_box.dart';
 import 'package:onef/widgets/theming/text.dart';

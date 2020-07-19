@@ -289,7 +289,7 @@ class Post extends UpdatableModel<Post> {
   }
 
   bool isEncircledPost() {
-    return isEncircled || false;
+    return (isEncircled != null && isEncircled) || false;
   }
 
   bool isOlderThan(Duration duration) {

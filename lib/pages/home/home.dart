@@ -28,6 +28,7 @@ import 'package:onef/translation/constants.dart';
 import 'package:onef/widgets/avatars/avatar.dart';
 import 'package:onef/widgets/drawable.dart';
 import 'package:onef/widgets/icon.dart';
+import 'package:onef/pages/home/pages/timeline/timeline.dart';
 
 class OFHomePage extends StatefulWidget {
   @override
@@ -54,6 +55,7 @@ class OFHomePageState extends State<OFHomePage> with WidgetsBindingObserver {
   StreamSubscription _pushNotificationOpenedSubscription;
   StreamSubscription _pushNotificationSubscription;
 
+  OFTimelinePageController _timelinePageController;
   OFMainPageController _mainPageController;
   //OFStoryPageController _storyPageController;
   OFTaskHomePageController _taskHomePageController;
@@ -73,6 +75,7 @@ class OFHomePageState extends State<OFHomePage> with WidgetsBindingObserver {
     _currentIndex = 0;
     _needsBootstrap = true;
     _loggedInUserUnreadNotifications = 0;
+    _timelinePageController = OFTimelinePageController();
     _mainPageController = OFMainPageController();
     //_storyPageController = OFStoryPageController();
     _taskHomePageController = OFTaskHomePageController();
@@ -150,11 +153,11 @@ class OFHomePageState extends State<OFHomePage> with WidgetsBindingObserver {
   Widget _getPageForTabIndex(int index) {
     Widget page;
     switch (OFHomePageTabs.values[index]) {
-     /* case OFHomePageTabs.main:
-        page = OFStoryPage(
-          controller: _storyPageController,
+      case OFHomePageTabs.timeline:
+        page = OFTimelinePage(
+          controller: _timelinePageController,
         );
-        break;*/
+        break;
       case OFHomePageTabs.task:
         page = OFTaskListPage(
           controller: _taskListPageController,
@@ -189,15 +192,15 @@ class OFHomePageState extends State<OFHomePage> with WidgetsBindingObserver {
       onTap: (int index) {
         var tappedTab = OFHomePageTabs.values[index];
         var currentTab = OFHomePageTabs.values[_lastIndex];
-/*
-        if (tappedTab == OFHomePageTabs.main &&
-            currentTab == OFHomePageTabs.main) {
-          if (_mainPageController.isFirstRoute()) {
-            _mainPageController.scrollToTop();
+
+        if (tappedTab == OFHomePageTabs.timeline &&
+            currentTab == OFHomePageTabs.timeline) {
+          if (_timelinePageController.isFirstRoute()) {
+            _timelinePageController.scrollToTop();
           } else {
-            _mainPageController.popUntilFirstRoute();
+            _timelinePageController.popUntilFirstRoute();
           }
-        }*/
+        }
 
         /*if (tappedTab == OFHomePageTabs.main &&
             currentTab == OFHomePageTabs.main) {
@@ -320,7 +323,7 @@ class OFHomePageState extends State<OFHomePage> with WidgetsBindingObserver {
       }
     }
 
-    //_shareService.subscribe(_onShare);
+    _shareService.subscribe(_onShare);
   }
 
   Future _logout({unsubscribePushNotifications = false}) async {
@@ -339,9 +342,9 @@ class OFHomePageState extends State<OFHomePage> with WidgetsBindingObserver {
     PoppablePageController currentTabController;
 
     switch (currentTab) {
-    /*  case OFHomePageTabs.main:
-        currentTabController = _storyPageController;
-        break;*/
+      case OFHomePageTabs.timeline:
+      currentTabController = _timelinePageController;
+      break;
       case OFHomePageTabs.task:
         currentTabController = _taskHomePageController;
         break;
@@ -406,6 +409,14 @@ class OFHomePageState extends State<OFHomePage> with WidgetsBindingObserver {
   }
 
   Future<bool> _onShare({String text, File image, File video}) async {
+    bool postCreated = await _timelinePageController.createPost(
+        text: text, image: image, video: video);
+
+    if (postCreated) {
+      _timelinePageController.popUntilFirstRoute();
+      _navigateToTab(OFHomePageTabs.timeline);
+    }
+
     return true;
   }
 
@@ -439,4 +450,4 @@ class OFHomePageState extends State<OFHomePage> with WidgetsBindingObserver {
   }
 }
 
-enum OFHomePageTabs { main, task, note, search, profile }
+enum OFHomePageTabs { timeline, task, note, search, profile }

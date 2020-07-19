@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -25,8 +24,12 @@ class OFVideoPickerBottomSheet extends StatelessWidget {
           localizationService.video_picker__from_gallery,
         ),
         onTap: () async {
-          File file = await FilePicker.getFile(type: FileType.VIDEO);
-          Navigator.pop(context, file);
+          bool permissionGranted = await provider.permissionService
+              .requestStoragePermissions(context: context);
+          if (permissionGranted) {
+            File file = await FilePicker.getFile(type: FileType.video);
+            Navigator.pop(context, file);
+          }
         },
       ),
       ListTile(
@@ -35,20 +38,24 @@ class OFVideoPickerBottomSheet extends StatelessWidget {
           localizationService.video_picker__from_camera,
         ),
         onTap: () async {
-          File pickedVideo =
-              await ImagePicker.pickVideo(source: ImageSource.camera);
-          Navigator.pop(context, pickedVideo);
+          bool permissionGranted = await provider.permissionService
+              .requestCameraPermissions(context: context);
+          if (permissionGranted) {
+            File pickedVideo =
+                await ImagePicker.pickVideo(source: ImageSource.camera);
+            Navigator.pop(context, pickedVideo);
+          }
         },
       )
     ];
 
     return OFRoundedBottomSheet(
         child: Padding(
-      padding: EdgeInsets.only(bottom: 16),
-      child: Column(
-        children: videoPickerActions,
-        mainAxisSize: MainAxisSize.min,
-      ),
-    ));
+          padding: EdgeInsets.only(bottom: 16),
+          child: Column(
+            children: videoPickerActions,
+            mainAxisSize: MainAxisSize.min,
+          ),
+        ));
   }
 }

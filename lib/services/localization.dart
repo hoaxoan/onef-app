@@ -4111,6 +4111,27 @@ class LocalizationService {
     return Intl.message("New List", name: 'task__new_list');
   }
 
+  String get post__create_media {
+    return Intl.message("Media", name: 'post__create_media');
+  }
+
+  String get post__create_camera {
+    return Intl.message("Camera", name: 'post__create_camera');
+  }
+
+  String error__receive_share_text_too_long(int limit) {
+    return Intl.message("Text is too long (limit: $limit characters)",
+        args: [limit], name: 'error__receive_share_text_too_long');
+  }
+
+  String get user_search__selection_clear_all {
+    return Intl.message("Clear all", name: 'user_search__selection_clear_all');
+  }
+
+  String get user_search__selection_submit {
+    return Intl.message("Submit", name: 'user_search__selection_submit');
+  }
+
   Locale getLocale() {
     return locale;
   }

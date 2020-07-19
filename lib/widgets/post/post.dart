@@ -11,7 +11,7 @@ import 'package:onef/widgets/post/widgets/post_divider.dart';
 import 'package:onef/widgets/post/widgets/post_header/post_header.dart';
 import 'package:onef/widgets/post/widgets/post_reactions.dart';
 
-class OBPost extends StatelessWidget {
+class OFPost extends StatelessWidget {
   final Post post;
   final ValueChanged<Post> onPostDeleted;
   final ValueChanged<Post> onPostIsInView;
@@ -22,7 +22,7 @@ class OBPost extends StatelessWidget {
   final ValueChanged<Community> onPostCommunityExcludedFromProfilePosts;
   final OFPostDisplayContext displayContext;
 
-  const OBPost(this.post,
+  const OFPost(this.post,
       {Key key,
       @required this.onPostDeleted,
       this.onPostIsInView,
