@@ -3,7 +3,7 @@ import 'package:onef/services/localization.dart';
 
 String getPrettyCount(int value, LocalizationService localizationService) {
   String postfix;
-  double finalValue;
+  double  finalValue;
 
   if (value < 0) {
     throw 'Invalid value';

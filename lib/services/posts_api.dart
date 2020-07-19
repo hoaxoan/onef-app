@@ -11,6 +11,7 @@ class PostsApiService {
   String apiURL;
 
   static const GET_POSTS_PATH = 'posts';
+  static const CREATE_POST_PATH = 'posts';
 
   static const GET_TOP_POSTS_PATH = 'api/posts/top/';
   static const EXCLUDED_TOP_POSTS_COMMUNITIES_PATH =
@@ -26,7 +27,6 @@ class PostsApiService {
   static const EXCLUDED_PROFILE_POSTS_COMMUNITIES_SEARCH_PATH =
       'api/posts/profile/excluded-communities/search/';
   static const GET_TRENDING_POSTS_PATH = 'api/posts/trending/new/';
-  static const CREATE_POST_PATH = 'api/posts/';
   static const POST_MEDIA_PATH = 'api/posts/{postUuid}/media/';
   static const EDIT_POST_PATH = 'api/posts/{postUuid}/';
   static const PUBLISH_POST_PATH = 'api/posts/{postUuid}/publish/';
@@ -171,7 +171,7 @@ class PostsApiService {
       body['circle_id'] = circleIds.join(',');
     }
 
-    return _httpService.putMultiform(_makeApiUrl(CREATE_POST_PATH),
+    return _httpService.postMultiform(_makeApiUrl(CREATE_POST_PATH),
         body: body, appendAuthorizationToken: true);
   }
 
