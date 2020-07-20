@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:connectivity/connectivity.dart';
+import 'package:onef/models/post_comment.dart';
 import 'package:onef/services/connectivity.dart';
 import 'package:onef/services/storage.dart';
 import 'package:rxdart/rxdart.dart';
@@ -190,6 +191,33 @@ class UserPreferencesService {
             (currentVideosAutoPlaySetting == VideosAutoPlaySetting.wifiOnly &&
                 _currentConnectivity == ConnectivityResult.wifi);
     _videosAutoPlayEnabledChangeSubject.add(_videosAutoPlayAreEnabled);
+  }
+
+  Future setPostCommentsSortType(PostCommentsSortType type) {
+    _getPostCommentsSortTypeCache = null;
+    String rawType = PostComment.convertPostCommentSortTypeToString(type);
+    return _storage.set(postCommentsSortTypeStorageKey, rawType);
+  }
+
+  Future<PostCommentsSortType> getPostCommentsSortType() async {
+    if (_getPostCommentsSortTypeCache != null)
+      return _getPostCommentsSortTypeCache;
+    _getPostCommentsSortTypeCache = _getPostCommentsSortType();
+    return _getPostCommentsSortTypeCache;
+  }
+
+  Future<PostCommentsSortType> _getPostCommentsSortType() async {
+    String rawType = await _storage.get(postCommentsSortTypeStorageKey);
+    if (rawType == null) {
+      PostCommentsSortType defaultSortType = _getDefaultPostCommentsSortType();
+      await setPostCommentsSortType(defaultSortType);
+      return defaultSortType;
+    }
+    return PostComment.parsePostCommentSortType(rawType);
+  }
+
+  PostCommentsSortType _getDefaultPostCommentsSortType() {
+    return PostCommentsSortType.asc;
   }
 
   Future clear() {

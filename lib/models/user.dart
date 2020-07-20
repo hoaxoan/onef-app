@@ -1,5 +1,11 @@
 import 'package:dcache/dcache.dart';
+import 'package:onef/models/badge.dart';
+import 'package:onef/models/circles_list.dart';
 import 'package:onef/models/community.dart';
+import 'package:onef/models/community_invite_list.dart';
+import 'package:onef/models/community_membership.dart';
+import 'package:onef/models/community_membership_list.dart';
+import 'package:onef/models/follows_lists_list.dart';
 import 'package:onef/models/language.dart';
 import 'package:onef/models/post.dart';
 import 'package:onef/models/post_comment.dart';
@@ -35,6 +41,11 @@ class User extends UpdatableModel<User> {
   bool isFullyConnected;
   bool isPendingConnectionConfirmation;
   bool isMemberOfCommunities;
+
+  CirclesList connectedCircles;
+  FollowsListsList followLists;
+  CommunityMembershipList communitiesMemberships;
+  CommunityInviteList communitiesInvites;
 
   static final navigationUsersFactory = UserFactory(
       cache:
@@ -297,7 +308,7 @@ class User extends UpdatableModel<User> {
 
   bool canDisableOrEnableCommentsForPost(Post post) {
     User loggedInUser = this;
-    bool _canDisableOrEnableComments = false;
+    bool _canDisableOrEnableComments = true;
 
     if (post.hasCommunity()) {
       Community postCommunity = post.community;
@@ -325,6 +336,47 @@ class User extends UpdatableModel<User> {
     return post.hasLanguage() && post.getLanguage().code != language.code;
   }
 
+  bool canReplyPostComment(PostComment postComment) {
+    return postComment.parentComment == null;
+  }
+
+  bool isAdministratorOfCommunity(Community community) {
+    CommunityMembership membership = getMembershipForCommunity(community);
+    if (membership == null) return false;
+    return membership.isAdministrator;
+  }
+
+  bool isModeratorOfCommunity(Community community) {
+    CommunityMembership membership = getMembershipForCommunity(community);
+    if (membership == null) return false;
+    return membership.isModerator;
+  }
+
+  bool isMemberOfCommunity(Community community) {
+    return getMembershipForCommunity(community) != null;
+  }
+
+  CommunityMembership getMembershipForCommunity(Community community) {
+    if (communitiesMemberships == null) return null;
+
+    int membershipIndex = communitiesMemberships.communityMemberships
+        .indexWhere((CommunityMembership communityMembership) {
+      return communityMembership.userId == this.id &&
+          communityMembership.communityId == community.id;
+    });
+
+    if (membershipIndex < 0) return null;
+
+    return communitiesMemberships.communityMemberships[membershipIndex];
+  }
+
+  List<Badge> getProfileBadges() {
+    return this.profile.badges;
+  }
+
+  Badge getDisplayedProfileBadge() {
+    return getProfileBadges().first;
+  }
 
 }
 

@@ -17,6 +17,9 @@ import 'package:onef/models/emoji_group_list.dart';
 import 'package:onef/models/follows_list.dart';
 import 'package:onef/models/post.dart';
 import 'package:onef/models/post_comment.dart';
+import 'package:onef/models/post_comment_list.dart';
+import 'package:onef/models/post_comment_reaction.dart';
+import 'package:onef/models/post_comment_reaction_list.dart';
 import 'package:onef/models/post_media_list.dart';
 import 'package:onef/models/post_reaction.dart';
 import 'package:onef/models/posts_list.dart';
@@ -1311,6 +1314,148 @@ class UserService {
     HttpieResponse response = await _connectionsCirclesApiService.getCircles();
     _checkResponseIsOk(response);
     return CirclesList.fromJson(json.decode(response.body));
+  }
+
+  // PostComment
+  Future<PostComment> commentPost(
+      {@required Post post, @required String text}) async {
+    HttpieResponse response =
+    await _postsApiService.commentPost(postUuid: post.uuid, text: text);
+    _checkResponseIsCreated(response);
+    return PostComment.fromJSON(json.decode(response.body));
+  }
+
+  Future<PostComment> editPostComment(
+      {@required Post post,
+        @required PostComment postComment,
+        @required String text}) async {
+    HttpieResponse response = await _postsApiService.editPostComment(
+        postUuid: post.uuid, postCommentId: postComment.id, text: text);
+    _checkResponseIsOk(response);
+    return PostComment.fromJSON(json.decode(response.body));
+  }
+
+  Future<PostComment> getPostComment(
+      {@required Post post, @required PostComment postComment}) async {
+    HttpieResponse response = await _postsApiService.getPostComment(
+        postUuid: post.uuid, postCommentId: postComment.id);
+    _checkResponseIsOk(response);
+    return PostComment.fromJSON(json.decode(response.body));
+  }
+
+  Future<PostComment> replyPostComment(
+      {@required Post post,
+        @required PostComment postComment,
+        @required String text}) async {
+    HttpieResponse response = await _postsApiService.replyPostComment(
+        postUuid: post.uuid, postCommentId: postComment.id, text: text);
+    _checkResponseIsCreated(response);
+    return PostComment.fromJSON(json.decode(response.body));
+  }
+
+  Future<void> deletePostComment(
+      {@required PostComment postComment, @required Post post}) async {
+    HttpieResponse response = await _postsApiService.deletePostComment(
+        postCommentId: postComment.id, postUuid: post.uuid);
+    _checkResponseIsOk(response);
+  }
+
+  Future<Post> mutePost(Post post) async {
+    HttpieResponse response =
+    await _postsApiService.mutePostWithUuid(post.uuid);
+    _checkResponseIsOk(response);
+    return Post.fromJson(json.decode(response.body));
+  }
+
+  Future<Post> unmutePost(Post post) async {
+    HttpieResponse response =
+    await _postsApiService.unmutePostWithUuid(post.uuid);
+    _checkResponseIsOk(response);
+    return Post.fromJson(json.decode(response.body));
+  }
+
+  Future<PostCommentList> getCommentsForPost(Post post,
+      {int maxId,
+        int countMax,
+        int minId,
+        int countMin,
+        PostCommentsSortType sort}) async {
+    HttpieResponse response = await _postsApiService.getCommentsForPostWithUuid(
+        post.uuid,
+        countMax: countMax,
+        maxId: maxId,
+        countMin: countMin,
+        minId: minId,
+        sort: sort != null
+            ? PostComment.convertPostCommentSortTypeToString(sort)
+            : null);
+
+    _checkResponseIsOk(response);
+    return PostCommentList.fromJson(json.decode(response.body));
+  }
+
+  Future<PostCommentList> getCommentRepliesForPostComment(
+      Post post, PostComment postComment,
+      {int maxId,
+        int countMax,
+        int minId,
+        int countMin,
+        PostCommentsSortType sort}) async {
+    HttpieResponse response = await _postsApiService
+        .getRepliesForCommentWithIdForPostWithUuid(post.uuid, postComment.id,
+        countMax: countMax,
+        maxId: maxId,
+        countMin: countMin,
+        minId: minId,
+        sort: sort != null
+            ? PostComment.convertPostCommentSortTypeToString(sort)
+            : null);
+
+    _checkResponseIsOk(response);
+    return PostCommentList.fromJson(json.decode(response.body));
+  }
+
+  // PostCommentReaction
+  Future<PostCommentReaction> reactToPostComment(
+      {@required Post post,
+        @required PostComment postComment,
+        @required Emoji emoji}) async {
+    HttpieResponse response = await _postsApiService.reactToPostComment(
+      postCommentId: postComment.id,
+      postUuid: post.uuid,
+      emojiId: emoji.id,
+    );
+    _checkResponseIsCreated(response);
+    return PostCommentReaction.fromJson(json.decode(response.body));
+  }
+
+  Future<void> deletePostCommentReaction(
+      {@required PostCommentReaction postCommentReaction,
+        @required PostComment postComment,
+        @required Post post}) async {
+    HttpieResponse response = await _postsApiService.deletePostCommentReaction(
+        postCommentReactionId: postCommentReaction.id,
+        postUuid: post.uuid,
+        postCommentId: postComment.id);
+    _checkResponseIsOk(response);
+  }
+
+  Future<PostCommentReactionList> getReactionsForPostComment(
+      {PostComment postComment,
+        Post post,
+        int count,
+        int maxId,
+        Emoji emoji}) async {
+    HttpieResponse response = await _postsApiService.getReactionsForPostComment(
+        postUuid: post.uuid,
+        postCommentId: postComment.id,
+        count: count,
+        maxId: maxId,
+        emojiId: emoji.id);
+
+    _checkResponseIsOk(response);
+
+    return PostCommentReactionList.fromJson(json.decode(response.body));
   }
 
 }

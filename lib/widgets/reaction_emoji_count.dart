@@ -10,13 +10,13 @@ class OFEmojiReactionButton extends StatelessWidget {
   final bool reacted;
   final ValueChanged<ReactionsEmojiCount> onPressed;
   final ValueChanged<ReactionsEmojiCount> onLongPressed;
-  final OBEmojiReactionButtonSize size;
+  final OFEmojiReactionButtonSize size;
 
   const OFEmojiReactionButton(this.postReactionsEmojiCount,
       {this.onPressed,
       this.reacted,
       this.onLongPressed,
-      this.size = OBEmojiReactionButtonSize.medium});
+      this.size = OFEmojiReactionButtonSize.medium});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class OFEmojiReactionButton extends StatelessWidget {
 
     List<Widget> buttonRowItems = [
       Image(
-        height: size == OBEmojiReactionButtonSize.medium ? 18 : 14,
+        height: size == OFEmojiReactionButtonSize.medium ? 18 : 14,
         image: AdvancedNetworkImage(emoji.image, useDiskCache: true),
       ),
       const SizedBox(
@@ -34,7 +34,7 @@ class OFEmojiReactionButton extends StatelessWidget {
         postReactionsEmojiCount.getPrettyCount(),
         style: TextStyle(
             fontWeight: reacted ? FontWeight.bold : FontWeight.normal,
-            fontSize: size == OBEmojiReactionButtonSize.medium ? null : 12),
+            fontSize: size == OFEmojiReactionButtonSize.medium ? null : 12),
       )
     ];
 
@@ -55,4 +55,4 @@ class OFEmojiReactionButton extends StatelessWidget {
   }
 }
 
-enum OBEmojiReactionButtonSize { small, medium }
+enum OFEmojiReactionButtonSize { small, medium }

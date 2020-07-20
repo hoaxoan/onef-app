@@ -13,6 +13,9 @@ import 'package:onef/models/user.dart';
 import 'package:onef/pages/home/pages/modals/save_post/pages/share_post/pages/share_post_with_circles.dart';
 import 'package:onef/pages/home/pages/modals/save_post/pages/share_post/pages/share_post_with_community.dart';
 import 'package:onef/pages/home/pages/modals/save_post/pages/share_post/share_post.dart';
+import 'package:onef/pages/home/pages/post/post.dart';
+import 'package:onef/pages/home/pages/post_comments/post_comments_page.dart';
+import 'package:onef/pages/home/pages/post_comments/post_comments_page_controller.dart';
 import 'package:onef/widgets/new_post_data_uploader.dart';
 import 'package:onef/widgets/routes/slide_right_route.dart';
 
@@ -273,33 +276,33 @@ class NavigationService {
 
   Future navigateToCommentPost(
       {@required Post post, @required BuildContext context}) {
-    /*return Navigator.push(
+    return Navigator.push(
         context,
         OFSlideRightRoute<dynamic>(
             slidableKey: _getKeyRandomisedWithWord('commentPostPageRoute'),
             builder: (BuildContext context) {
-              return OBPostCommentsPage(
+              return OFPostCommentsPage(
                   pageType: PostCommentsPageType.comments,
                   post: post,
                   showPostPreview: true,
                   autofocusCommentInput: true);
-            }));*/
+            }));
   }
 
   Future<void> navigateToPostComments(
       {@required Post post, @required BuildContext context}) {
-    /*return Navigator.push(
+    return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('postCommentsPageRoute'),
           builder: (BuildContext context) {
-            return OBPostCommentsPage(
+            return OFPostCommentsPage(
                 post: post,
                 showPostPreview: true,
                 pageType: PostCommentsPageType.comments,
                 autofocusCommentInput: false);
           }),
-    );*/
+    );
   }
 
   Future<void> navigateToPostCommentReplies(
@@ -308,12 +311,12 @@ class NavigationService {
       @required BuildContext context,
       Function(PostComment) onReplyDeleted,
       Function(PostComment) onReplyAdded}) {
-   /* return Navigator.push(
+    return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('postCommentRepliesPageRoute'),
           builder: (BuildContext context) {
-            return OBPostCommentsPage(
+            return OFPostCommentsPage(
                 pageType: PostCommentsPageType.replies,
                 post: post,
                 showPostPreview: true,
@@ -322,37 +325,37 @@ class NavigationService {
                 onCommentAdded: onReplyAdded,
                 autofocusCommentInput: false);
           }),
-    );*/
+    );
   }
 
   Future<void> navigateToPostCommentsLinked(
       {@required PostComment postComment, @required BuildContext context}) {
-    /*return Navigator.push(
+    return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('postCommentsLinkedPageRoute'),
           builder: (BuildContext context) {
-            return OBPostCommentsPage(
+            return OFPostCommentsPage(
                 post: postComment.post,
                 showPostPreview: true,
                 pageType: PostCommentsPageType.comments,
                 linkedPostComment: postComment,
                 autofocusCommentInput: false);
           }),
-    );*/
+    );
   }
 
   Future<void> navigateToPostCommentRepliesLinked(
       {@required PostComment postComment,
       @required PostComment parentComment,
       @required BuildContext context}) {
-    /*return Navigator.push(
+    return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey:
               _getKeyRandomisedWithWord('postCommentRepliesLinkedPageRoute'),
           builder: (BuildContext context) {
-            return OBPostCommentsPage(
+            return OFPostCommentsPage(
                 post: postComment.post,
                 postComment: parentComment,
                 showPostPreview: true,
@@ -360,18 +363,18 @@ class NavigationService {
                 linkedPostComment: postComment,
                 autofocusCommentInput: false);
           }),
-    );*/
+    );
   }
 
   Future navigateToPost({@required Post post, @required BuildContext context}) {
-    /*return Navigator.push(
+    return Navigator.push(
       context,
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('postPageRoute'),
           builder: (BuildContext context) {
-            return OBPostPage(post);
+            return OFPostPage(post);
           }),
-    );*/
+    );
   }
 
   Future navigateToSettingsPage({@required BuildContext context}) {

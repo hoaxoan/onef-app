@@ -12,6 +12,12 @@ class PostsApiService {
 
   static const GET_POSTS_PATH = 'posts';
   static const CREATE_POST_PATH = 'posts';
+  static const PUBLISH_POST_PATH = 'posts/{postUuid}/publish';
+
+
+  static const GET_COMMENT_POST_PATH = 'posts/{postUuid}/comments/{postCommentId}';
+  static const GET_POST_COMMENTS_PATH = 'posts/{postUuid}/comments';
+  static const REPLY_COMMENT_POST_PATH = 'posts/{postUuid}/comments/{postCommentId}/replies';
 
   static const GET_TOP_POSTS_PATH = 'api/posts/top/';
   static const EXCLUDED_TOP_POSTS_COMMUNITIES_PATH =
@@ -29,7 +35,6 @@ class PostsApiService {
   static const GET_TRENDING_POSTS_PATH = 'api/posts/trending/new/';
   static const POST_MEDIA_PATH = 'api/posts/{postUuid}/media/';
   static const EDIT_POST_PATH = 'api/posts/{postUuid}/';
-  static const PUBLISH_POST_PATH = 'api/posts/{postUuid}/publish/';
   static const POST_PATH = 'api/posts/{postUuid}/';
   static const GET_POST_STATUS_PATH = 'api/posts/{postUuid}/status/';
   static const OPEN_POST_PATH = 'api/posts/{postUuid}/open/';
@@ -37,10 +42,6 @@ class PostsApiService {
   static const COMMENT_POST_PATH = 'api/posts/{postUuid}/comments/';
   static const EDIT_COMMENT_POST_PATH =
       'api/posts/{postUuid}/comments/{postCommentId}/';
-  static const GET_COMMENT_POST_PATH =
-      'api/posts/{postUuid}/comments/{postCommentId}/';
-  static const REPLY_COMMENT_POST_PATH =
-      'api/posts/{postUuid}/comments/{postCommentId}/replies/';
   static const MUTE_POST_PATH = 'api/posts/{postUuid}/notifications/mute/';
   static const UNMUTE_POST_PATH = 'api/posts/{postUuid}/notifications/unmute/';
   static const REPORT_POST_PATH = 'api/posts/{postUuid}/report/';
@@ -52,7 +53,6 @@ class PostsApiService {
       'api/posts/{postUuid}/comments/{postCommentId}/';
   static const REPORT_POST_COMMENT_PATH =
       'api/posts/{postUuid}/comments/{postCommentId}/report/';
-  static const GET_POST_COMMENTS_PATH = 'api/posts/{postUuid}/comments/';
   static const DISABLE_POST_COMMENTS_PATH =
       'api/posts/{postUuid}/comments/disable/';
   static const ENABLE_POST_COMMENTS_PATH =
