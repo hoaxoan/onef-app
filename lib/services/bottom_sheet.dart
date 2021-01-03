@@ -15,6 +15,7 @@ import 'package:onef/models/user.dart';
 import 'package:onef/pages/home/bottom_sheets/camera_picker.dart';
 import 'package:onef/pages/home/bottom_sheets/confirm_action.dart';
 import 'package:onef/pages/home/bottom_sheets/image_picker.dart';
+import 'package:onef/pages/home/bottom_sheets/post_actions.dart';
 import 'package:onef/pages/home/bottom_sheets/react_to_post.dart';
 import 'package:onef/pages/home/bottom_sheets/video_picker.dart';
 import 'package:onef/services/media/models/media_file.dart';
@@ -165,7 +166,7 @@ class BottomSheetService {
     return _showModalBottomSheetApp(
         context: context,
         builder: (BuildContext context) {
-          /*return OFPostActionsBottomSheet(
+          return OFPostActionsBottomSheet(
             post: post,
             displayContext: displayContext,
             onCommunityExcluded: onCommunityExcluded,
@@ -173,7 +174,7 @@ class BottomSheetService {
             onPostCommunityExcludedFromProfilePosts: onPostCommunityExcludedFromProfilePosts,
             onPostDeleted: onPostDeleted,
             onPostReported: onPostReported,
-          );*/
+          );
         });
   }
 

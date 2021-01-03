@@ -122,9 +122,43 @@ flutter:
     - assets/
     - assets/images/splash-background.png
     - assets/images/openbook-o-logo.png
+    - assets/images/icons/gif-icon.png
+    - assets/images/icons/profile-icon.png
+    - assets/images/icons/connections-icon.png
+    - assets/images/icons/burner-icon.png
+    - assets/images/icons/settings-icon.png
+    - assets/images/icons/help-icon.png
+    - assets/images/icons/thinking.gif
+    - assets/images/icons/customize-icon.png
+    - assets/images/icons/logout-icon.png
+    - assets/images/icons/audience-icon.png
+    - assets/images/icons/home-icon.png
+    - assets/images/icons/notifications-icon.png
+    - assets/images/icons/search-icon.png
+    - assets/images/icons/communities-icon.png
+    - assets/images/icons/create-post-icon.png
+    - assets/images/icons/chat-icon.png
+    - assets/images/icons/photo-icon.png
+    - assets/images/icons/video-icon.png
+    - assets/images/icons/camera-icon.png
+    - assets/images/icons/warning-icon.png
+    - assets/images/icons/success-icon.png
+    - assets/images/icons/error-icon.png
+    - assets/images/icons/info-icon.png
+    - assets/images/icons/comments-icon.png
+    - assets/images/icons/comment-icon.png
+    - assets/images/icons/react-icon.png
+    - assets/images/icons/like-icon.png
+    - assets/images/icons/finish-icon.png
+    - assets/images/icons/finish-icon.png
+    - assets/images/icons/expand-icon.png
+    - assets/images/icons/load-more-posts-icon.gif
     - assets/images/stickers/female-instructor.png
     - assets/images/stickers/got-it.png
     - assets/images/stickers/owl-instructor.png
     - assets/images/stickers/perplexed-owl.png
+    - assets/images/fallbacks/post-fallback.png
+    - assets/images/fallbacks/cover-fallback.jpg
+    - assets/images/fallbacks/avatar-fallback.jpg
     - .env.json
 # PUBSPEC CHECKSUM: ba0e

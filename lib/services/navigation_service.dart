@@ -773,7 +773,7 @@ class NavigationService {
             );
           }),
     );
-  }
+  }*/
 
   Future<void> navigateToReportObject(
       {@required BuildContext context,
@@ -785,14 +785,14 @@ class NavigationService {
       OFSlideRightRoute<dynamic>(
           slidableKey: _getKeyRandomisedWithWord('reportObjectPageRoute'),
           builder: (BuildContext context) {
-            return OBReportObjectPage(
+            /*return OFReportObjectPage(
               object: object,
               extraData: extraData,
               onObjectReported: onObjectReported,
-            );
+            );*/
           }),
     );
-  }*/
+  }
 
  /* Future<void> navigateToCommunityModeratedObjects(
       {@required BuildContext context, @required Community community}) async {

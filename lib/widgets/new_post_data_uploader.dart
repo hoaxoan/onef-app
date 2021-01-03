@@ -220,7 +220,7 @@ class OFNewPostDataUploaderState extends State<OFNewPostDataUploader>
       debugLog('Creating circles post');
 
       draftPost = await _userService.createPost(
-          text: _data.text, circles: _data.getCircles(), isDraft: true);
+          text: _data.text, circles: _data.circles != null ? _data.getCircles() : [], isDraft: true);
     }
 
     debugLog('Post created successfully');

@@ -13,6 +13,8 @@ class PostsApiService {
   static const GET_POSTS_PATH = 'posts';
   static const CREATE_POST_PATH = 'posts';
   static const PUBLISH_POST_PATH = 'posts/{postUuid}/publish';
+  static const GET_POST_STATUS_PATH = 'posts/{postUuid}/status';
+  static const POST_PATH = 'posts/{postUuid}';
 
 
   static const GET_COMMENT_POST_PATH = 'posts/{postUuid}/comments/{postCommentId}';
@@ -35,8 +37,6 @@ class PostsApiService {
   static const GET_TRENDING_POSTS_PATH = 'api/posts/trending/new/';
   static const POST_MEDIA_PATH = 'api/posts/{postUuid}/media/';
   static const EDIT_POST_PATH = 'api/posts/{postUuid}/';
-  static const POST_PATH = 'api/posts/{postUuid}/';
-  static const GET_POST_STATUS_PATH = 'api/posts/{postUuid}/status/';
   static const OPEN_POST_PATH = 'api/posts/{postUuid}/open/';
   static const CLOSE_POST_PATH = 'api/posts/{postUuid}/close/';
   static const COMMENT_POST_PATH = 'api/posts/{postUuid}/comments/';
@@ -215,7 +215,7 @@ class PostsApiService {
 
     String path = _makePostPath(postUuid);
 
-    return _httpService.patchMultiform(_makeApiUrl(path),
+    return _httpService.putMultiform(_makeApiUrl(path),
         body: body, appendAuthorizationToken: true);
   }
 

@@ -1458,6 +1458,34 @@ class UserService {
     return PostCommentReactionList.fromJson(json.decode(response.body));
   }
 
+  Future<Post> disableCommentsForPost(Post post) async {
+    HttpieResponse response =
+    await _postsApiService.disableCommentsForPostWithUuidPost(post.uuid);
+    _checkResponseIsOk(response);
+    return Post.fromJson(json.decode(response.body));
+  }
+
+  Future<Post> enableCommentsForPost(Post post) async {
+    HttpieResponse response =
+    await _postsApiService.enableCommentsForPostWithUuidPost(post.uuid);
+    _checkResponseIsOk(response);
+    return Post.fromJson(json.decode(response.body));
+  }
+
+  Future<Post> closePost(Post post) async {
+    HttpieResponse response =
+    await _postsApiService.closePostWithUuid(post.uuid);
+    _checkResponseIsOk(response);
+    return Post.fromJson(json.decode(response.body));
+  }
+
+  Future<Post> openPost(Post post) async {
+    HttpieResponse response =
+    await _postsApiService.openPostWithUuid(post.uuid);
+    _checkResponseIsOk(response);
+    return Post.fromJson(json.decode(response.body));
+  }
+
 }
 
 class CredentialsMismatchError implements Exception {

@@ -356,6 +356,46 @@ class User extends UpdatableModel<User> {
     return getMembershipForCommunity(community) != null;
   }
 
+  bool canDeletePost(Post post) {
+    User loggedInUser = this;
+    bool loggedInUserIsPostCreator = loggedInUser.id == post.getCreatorId();
+    bool _canDelete = false;
+    bool loggedInUserIsStaffForCommunity = false;
+
+   /* if (post.hasCommunity()) {
+      loggedInUserIsStaffForCommunity =
+          this.isStaffForCommunity(post.community);
+    }*/
+
+    if (loggedInUserIsPostCreator || loggedInUserIsStaffForCommunity) {
+      _canDelete = true;
+    }
+
+    return _canDelete;
+  }
+
+  bool canEditPost(Post post) {
+    User loggedInUser = this;
+    bool loggedInUserIsPostCreator = loggedInUser.id == post.getCreatorId();
+
+    return loggedInUserIsPostCreator && (post.isClosed == null || !post.isClosed);
+  }
+
+  bool canCloseOrOpenPost(Post post) {
+    User loggedInUser = this;
+    bool _canCloseOrOpenPost = false;
+
+    if (post.hasCommunity()) {
+      Community postCommunity = post.community;
+
+      if (postCommunity.isAdministrator(loggedInUser) ||
+          postCommunity.isModerator(loggedInUser)) {
+        _canCloseOrOpenPost = true;
+      }
+    }
+    return _canCloseOrOpenPost;
+  }
+
   CommunityMembership getMembershipForCommunity(Community community) {
     if (communitiesMemberships == null) return null;
 

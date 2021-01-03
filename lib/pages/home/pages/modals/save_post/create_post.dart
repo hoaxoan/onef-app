@@ -281,6 +281,7 @@ class OFSavePostModalState extends OFContextualSearchBoxState<OFSavePostModal> {
     } else {
       if (isEnabled) {
         nextButton = GestureDetector(
+          //onTap: _onWantsToGoNext,
           onTap: _onWantsToGoNext,
           child: OFText(_localizationService.trans('post__create_next')),
         );
@@ -317,8 +318,10 @@ class OFSavePostModalState extends OFContextualSearchBoxState<OFSavePostModal> {
       return;
     }
 
-    OFNewPostData createPostData = await _navigationService.navigateToSharePost(
-        context: context, createPostData: _makeNewPostData());
+   /* OFNewPostData createPostData = await _navigationService.navigateToSharePost(
+        context: context, createPostData: _makeNewPostData());*/
+
+    OFNewPostData createPostData = _makeNewPostData();
 
     if (createPostData != null) {
       // Remove modal
